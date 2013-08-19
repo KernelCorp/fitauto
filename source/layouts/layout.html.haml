@@ -33,17 +33,15 @@
     
     -# Stylesheets
     = stylesheet_link_tag 'application'
-  %body{class: current_page.data.body_class || 'page'}
-    = yield
-    -# Javascripts
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+    = stylesheet_link_tag 'bootstrap'
+    = javascript_include_tag 'jquery.min'
     = javascript_include_tag 'application'
+    = javascript_include_tag 'jquery.jcarousel.min'
+    = javascript_include_tag 'modernizr.custom.79639'
+    = javascript_include_tag 'bootstrap'
+    = javascript_include_tag 'ready'
+  %body{class: current_page.data.body_class || 'page'}
+    #container
+      = yield
+    -# Javascripts
 
-    - if build?
-      -# Google Analytics
-      :javascript
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
