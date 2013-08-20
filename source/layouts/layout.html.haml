@@ -32,16 +32,18 @@
     %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
     
     -# Stylesheets
-    = stylesheet_link_tag 'application'
-    = stylesheet_link_tag 'bootstrap'
-    = javascript_include_tag 'jquery.min'
-    = javascript_include_tag 'application'
-    = javascript_include_tag 'jquery.jcarousel.min'
-    = javascript_include_tag 'modernizr.custom.79639'
-    = javascript_include_tag 'bootstrap'
-    = javascript_include_tag 'ready'
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheets/main.css'}
+    %script{:type => 'text/javascript', :src => 'javascripts/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/jquery.bxslider.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/bootstrap.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/ready.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/modernizr.custom.79639.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/jquery.jcarousel.min.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/application.js'}
   %body{class: current_page.data.body_class || 'page'}
     #container
+      = partial 'header'
       = yield
+      = partial 'footer'
     -# Javascripts
 

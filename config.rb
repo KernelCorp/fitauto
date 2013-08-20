@@ -48,7 +48,7 @@ end
 #   end
 # end
 
-page "main.html", :layout => :gallery
+page "main.html", :layout => :layout
 
 set :css_dir, 'stylesheets'
 

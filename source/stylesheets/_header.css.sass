@@ -59,10 +59,11 @@
 
 
 #header .topLogo
-	height: 77px
-	width: 100%
+	height: 100px
+	width: 570px
 	background: url('../img/headerTopLogo.png') no-repeat
-	position: relative
+	position: absolute
+	z-index: 2
 
 
 #header .topLogo .linkMain
@@ -76,14 +77,67 @@
 
 
 #header .topLogo .linkAddService
-	top: 15px
-	right: 280px
+	top: 19px
+	left: 230px
 	position: absolute
 	display: block
 	background: none
 	height: 25px
-	width: 170px
+	width: 270px
+	color: #ffffff
+	font-size: 13px
+	font-weight: bold
+	text-transform: uppercase
+	text-decoration: none
+	line-height: 15px
 
+
+#header .logo-container
+	position: relative
+	width: 100%
+	height: 100px
+
+#header .right-part
+	position: absolute
+	z-index: 1
+	background-color: #f27d32
+	height: 75px
+	width: 100%
+	padding-left: 600px
+	.white-button
+		background-color: #ffffff
+		border: none
+		box-shadow: 0 3px #c26428
+		border-radius: 20px
+		padding: 5px 20px 5px 20px
+		font-family: 'PTSans-bold'
+		text-transform: uppercase
+		margin: 15px 0 5px 0
+	.service-block
+		display: inline-block
+		vertical-align: top
+	a.service-book
+		position: relative
+		color: #ffffff
+		padding-left: 25px
+		span.service-book
+			position: absolute
+			background: url('../img/service-book.png') no-repeat
+			width: 20px
+			height: 20px
+			top: 0
+			left: 0
+	a.service-book:hover
+		color: #231f20
+	.info-block
+		display: inline-block
+		vertical-align: top
+		margin-top: 20px
+		span.code, span.phone
+			font-size: 37px
+		/*span.code
+			font-family
+		/*span.phone */
 
 #header .topLogo .linkServiceBook
 	top: 40px
@@ -103,8 +157,10 @@
 
 
 #header .mainMenu .element
-	width: 155px
+	min-width: 165px
 	height: 50px
+	text-decoration: underline
+	cursor: pointer
 
 .menu-element
 	float: left
@@ -117,12 +173,23 @@
 
 
 #header .mainMenu .element:hover .topElement
-	margin-left: -47px
-	padding-left: 47px
-	padding-right: 54px
-	padding-bottom: 16px
-	background: url('../img/headerMenuTopBack.png') no-repeat
-	padding-top: 16px
+	margin-left: -45px
+	/*padding-right: 54px
+	border: 2px solid #f1711c
+	border-left: none
+	border-radius: 25px
+	padding: 10px 2px 10px 45px
+	position: relative
+	z-index: 2
+
+#header .mainMenu .element:hover .topElement .topElement-inner
+	margin-left: -43px
+	/*padding-right: 54px
+	background-color: #f1711c
+	border: 2px solid #ffffff
+	border-left: none
+	border-radius: 20px
+	padding: 8px 5px 8px 41px
 	position: relative
 	z-index: 2
 
@@ -133,6 +200,7 @@
 	border: none
 	position: relative
 	z-index: 5
+
 
 #header .mainMenu .topElementMenuRepair
 	background: url('../img/headerMenuTopRepair.png') no-repeat

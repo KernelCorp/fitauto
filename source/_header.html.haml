@@ -58,17 +58,37 @@
 						%span.lIm
 						%span.liName
 							Франшиза
-	.topLogo
-		%a{:href=>"#", :class=>"linkMain"}
-		%a{:href=>"#", :class=>"linkAddService"}
-		%a{:href=>"#", :class=>"linkServiceBook"}
+	.logo-container
+		.topLogo
+			%a{:href=>"#", :class=>"linkMain"}
+			%a{:href=>"#", :class=>"linkAddService"} Федеральная сеть станций послегарантийного обслуживания
+			%a{:href=>"#", :class=>"linkServiceBook"}
+		.right-part
+			.service-block
+				%button.white-button
+					Записаться на сервис
+				%br
+				%a.service-book{:href => '#'}
+					%span.service-book
+					Сервисная книжка
+			.info-block
+				%span.code
+					(338)
+				%span.phone
+					380-65-65
+				%br
+				%span.work-time
+					с 9:00 до 21:00 без выходных
+
+
 
 	.mainMenu
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuRepair
 				%span.topElement
-					Ремонт
+					%span.topElement-inner
+						Ремонт
 			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 					%li
@@ -111,7 +131,8 @@
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuDiag
 				%span.topElement
-					Диагностика
+					%span.topElement-inner
+						Диагностика
 			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
@@ -122,7 +143,8 @@
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuTO
 				%span.topElement
-					Плановое&nbsp;ТО
+					%span.topElement-inner
+						Плановое&nbsp;ТО
 			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
@@ -130,10 +152,11 @@
 						%span.liName
 							О компании
 		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
+			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown', :style => 'width: 255px'}
 				%span.topElementMenuInstall
 				%span.topElement
-					Установка
+					%span.topElement-inner
+						Установка оборудования
 			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
@@ -144,7 +167,8 @@
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuShin
 				%span.topElement
-					Шиномонтаж
+					%span.topElement-inner
+						Шиномонтаж
 			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
@@ -155,7 +179,8 @@
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuService
 				%span.topElement
-					Наш&nbsp;сервис
+					%span.topElement-inner
+						Наш&nbsp;сервис
 			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
