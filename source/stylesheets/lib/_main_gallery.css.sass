@@ -1,0 +1,152 @@
+.main-gallery
+	background-color: #f27d32
+	color: #fff
+	height: 367px
+	margin: 0 auto
+	width: 1080px
+
+	.slider-navigation
+		display: inline-block
+		height: 367px
+		position: relative
+		vertical-align: top
+		width: 255px
+
+		.title
+			background-color: #ed4d30
+			border-bottom: 3px solid #fff
+			font-family: PTSans-bold
+			font-size: 30px
+			text-transform: uppercase
+			height: 26px
+			padding: 20px
+			position: relative
+			width: 150px
+
+		.title:after
+			background-color: #ed4d30
+			border-right: 3px solid #fff
+			border-bottom: 3px solid #fff
+			border-radius: 0 0 30px 0
+			content: " "
+			height: 100%
+			position: absolute
+			right: -39px
+			top: 0px
+			width: 45px
+			-webkit-transform: skewX(-12deg)
+
+		#bx-slider-custom-pager
+			margin: 20px 0 10px
+			a
+				text-transform: uppercase
+				background-color: #f06d32
+				border-bottom: 1px solid #ed4d30
+				color: #fff
+				display: block
+				font-family: PTSans-bold
+				font-size: 15px
+				margin: 6px 0
+				position: relative
+				padding: 8px 0px 10px 20px
+				text-decoration: none
+				height: 34px
+				width: 210px
+				z-index: 2
+
+			a.active
+				background-color: #ed4d30
+				padding-right: 20px
+
+			a.active:before
+				font-family: FontAwesome
+				font-size: 22px
+				padding-top: 18px
+				height: 29px
+				content: "\f105"
+				z-index: 3
+				position: absolute
+				right: -20px
+				top: 0px
+				width: 25px
+				color: #fff
+
+			a.active:after
+				background-color: #ed4d30
+				height: 51px
+				z-index: 2
+
+			a:after
+				background-color: #f06d32
+				border-radius: 0 10px 10px 0
+				border-bottom: 1px solid #ed4d30
+				content: " "
+				height: 100%
+				position: absolute
+				right: -20px
+				top: 0px
+				width: 25px
+				-webkit-transform: skewX(-12deg)
+
+		.all
+			color: #fff
+			margin-left: 20px
+			text-decoration: underline
+
+
+	.slider
+		display: inline-block
+		height: 367px
+		vertical-align: top
+		width: 821px
+		.elem
+			position: relative
+			width: 821px
+			height: 367px
+
+			img.background
+				position: relative
+
+			.text-layer
+				position: absolute
+				font-family: PTSans-bold
+				font-size: 15px
+				text-transform: uppercase
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				h1
+					font-family: PTSans-bold
+					font-size: 68px
+					line-height: 70px
+					text-transform: uppercase
+					margin-top: 70px
+					margin-bottom: 20px
+					text-align: center
+					text-shadow: 0 0 15px #000, 0 0 25px #000, 0 0 35px #000
+				p
+					margin-bottom: 20px
+					margin-left: 50%
+					text-align: left
+					text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 35px #000
+
+				.more-link
+					background-color: #f27d32
+					border: 7px solid #fff
+					border-radius: 12px
+					bottom: 20px
+					display: table
+					right: 5px
+					position: absolute
+					-webkit-transform: skewX(-12deg)
+					a
+						color: #fff
+						padding: 10px 20px
+						display: block
+						font-family: PTSans-bold
+						font-size: 15px
+						text-transform: uppercase
+						-webkit-transform: skewX(12deg)
+						i
+							font-size: 18px

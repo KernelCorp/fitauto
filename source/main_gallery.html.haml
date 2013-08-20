@@ -1,0 +1,101 @@
+.main-gallery
+	.slider-navigation
+		.title
+			АКЦИИ
+		#bx-slider-custom-pager
+			%a{:href=>'#', 'data-slide-index' => 0}
+				Экспресс-Замена технических жидкостей
+			%a{:href=>'#', 'data-slide-index' => 1}
+				Полная диагностика за 2000 рублей
+			%a{:href=>'#', 'data-slide-index' => 2}
+				Скидка 30% на ремонт стоек
+			%a{:href=>'#', 'data-slide-index' => 3}
+				Приведи друга - получи диагностику бесплатно
+
+		%a.all{:href=>''}
+			Все акции
+
+	.slider
+		%ul#bx-main-slider
+			%li
+				.elem
+					%img.background{:src => 'images/gallery/image_1.jpg'}
+					.text-layer
+						%h1
+							90 минут на замену
+						%p
+							МОТОРНОЕ МАСЛО
+							%br
+							ТРАНСМИССИОННАЯ ЖИДКОСТЬ
+							%br
+							АНТИФРИЗ
+						.more-link
+							%a{:href => '#'}
+								УЗНАТЬ БОЛЬШЕ
+								&nbsp;
+								%i.icon-angle-right
+
+			%li
+				.elem
+					%img.background{:src => 'images/gallery/image_2.jpg'}
+					.text-layer
+						%h1
+							Полная диагностика
+						%p
+							всего за 2000р
+							%br
+							элемент 2
+							%br
+							элемент 3
+						.more-link
+							%a{:href => '#'}
+								УЗНАТЬ БОЛЬШЕ
+								&nbsp;
+								%i.icon-angle-right
+
+			%li
+				.elem
+					%img.background{:src => 'images/gallery/image_3.jpg'}
+					.text-layer
+						%h1
+							Скидка 30%
+						%p
+							на ремонт стоек
+							%br
+							элемент 2
+							%br
+							элемент 3
+						.more-link
+							%a{:href => '#'}
+								УЗНАТЬ БОЛЬШЕ
+								&nbsp;
+								%i.icon-angle-right
+
+			%li
+				.elem
+					%img.background{:src => 'images/gallery/image_2.jpg'}
+					.text-layer
+						%h1
+							диагностика
+						%p
+							Бесплатная диагностика
+							Если привести друга
+							%br
+							ТРАНСМИССИОННАЯ ЖИДКОСТЬ
+							%br
+							АНТИФРИЗ
+						.more-link
+							%a{:href => '#'}
+								УЗНАТЬ БОЛЬШЕ
+								&nbsp;
+								%i.icon-angle-right
+
+
+:javascript
+	$(document).ready(function(){
+		$('#bx-main-slider').bxSlider({
+		controls: false,
+		pager: true,
+		pagerCustom: '#bx-slider-custom-pager'
+		});
+	});
