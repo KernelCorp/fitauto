@@ -1,0 +1,66 @@
+.blog-list-container
+	width: 1080px
+	margin: 20px auto
+	h4
+		margin-left: 20px
+	.all-records
+		float: right
+		margin-right: 20px
+		i
+			color: #ed4d30
+
+	.blogs-list
+		width: 1082px
+		position: relative
+
+		.blog-elem
+			border-bottom: 2px solid #f27d32
+			display: inline-block
+			font-family: ptsans-bold
+			height: 212px
+			margin-right: 36px
+			position: relative
+			vertical-align: top
+			width: 240px
+
+			img
+				position: relative
+				height: 145px
+				width: 240px
+
+			.date
+				color: #fff
+				display: table
+				font-size: 14px
+				margin-top: -15px
+				margin-left: 15px
+				margin-bottom: 5px
+				padding: 2px 15px
+				position: relative
+				z-index: 1
+
+			.date:before
+				background-color: #f27d32
+				border-radius: 8px
+				content: ' '
+				display: block
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				-o-transform: skewX(-12deg)
+				-moz-transform: skewX(-12deg)
+				-webkit-transform: skewX(-12deg)
+				transform: skewX(-12deg)
+				z-index: -1
+
+			a
+				display: block
+				font-family: ptsans-bold
+				font-size: 15px
+				text-transform: uppercase
+				margin: 0 15px
+
+		.blog-elem:last-child
+			margin-right: 0

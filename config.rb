@@ -48,6 +48,8 @@ end
 #   end
 # end
 
+page "main.html", :layout => :gallery
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
