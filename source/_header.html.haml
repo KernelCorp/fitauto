@@ -3,7 +3,7 @@
 		.yourCity
 			%span.blackFont
 				Ваш город:
-		.dd.wrapper-dropdown-2.city{:tabindex => "1"}
+		.dd.wrapper-dropdown-top.city{:tabindex => "1"}
 			%span.topElementCityIcon
 			%span.topElement
 				Москва
@@ -15,16 +15,16 @@
 								Новосибирск
 				%li
 					%a{ :href=>"#"}
-					%span.lIm
-						%span.liName
-							Москва
+						%span.lIm
+							%span.liName
+								Москва
 		.franch{:tabindex=>"1"}
 			%span.topElementCompanyFranch
 			%a{:href=>"#"}
 				%span.topElement
 					Купить франшизу
 		.blog{:tabindex=>"1"}
-			%span.topElementCompanyBlog"
+			%span.topElementCompanyBlog
 			%a{:href=>"#"}
 				%span.topElement
 					Блог
@@ -33,7 +33,7 @@
 			%a{:href=>"#"}
 				%span.topElement
 					Наши автосервисы
-		.dd.wrapper-dropdown-2.company{:tabindex=>"1"}
+		.dd.wrapper-dropdown-top.company{:tabindex=>"1"}
 			%span.topElementCompanyIcon
 			%span.topElement
 				Компания
@@ -47,17 +47,17 @@
 					%a{:href=>"#"}
 						%span.lIm
 						%span.liName
-							О компании
+							Вакансии
 				%li
 					%a{:href=>"#"}
 						%span.lIm
 						%span.liName
-							О компании
+							Корпоративным клиентам
 				%li
 					%a{:href=>"#"}
 						%span.lIm
 						%span.liName
-							О компании
+							Франшиза
 	.topLogo
 		%a{:href=>"#", :class=>"linkMain"}
 		%a{:href=>"#", :class=>"linkAddService"}
@@ -69,40 +69,50 @@
 				%span.topElementMenuRepair
 				%span.topElement
 					Ремонт
-			%ul.dropdown.dropdown-menu
+			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 					%li
 						%a{:href=>"#"}
 							%span.lIm
 							%span.liName
 								Ремонт кондиционера
-					%li.dropdown-submenu
+					%li.dropdown-sub#sub1
 						%a{:href=>"#", :tabindex => "-1"}
 							%span.lIm
 							%span.liName
 								Кузовной ремонт
-						%ul.dropdown-menu
+					%ul.dropdown.submenu.level1#sub1
+						%li
+							%a{:href=>"#", :tabindex => "-1"}
+								%span.lIm
+								%span.liName
+									Ремонт тормозной системы
 							%li
 								%a{:href=>"#", :tabindex => "-1"}
 									%span.lIm
 									%span.liName
-										Ремонт кондиционера
-								%li
-									%a{:href=>"#", :tabindex => "-1"}
-										%span.lIm
-										%span.liName
-											Ремонт кондиционера
+										Ремонт АКПП
+							%li
+								%a{:href=>"#", :tabindex => "-1"}
+									%span.lIm
+									%span.liName
+										Ремонт подвески
 					%li
 						%a{:href=>"#"}
 							%span.lIm
 							%span.liName
-								Ремонт автоэлектрики
+								Ремонт двигателя
+						%li
+							%a{:href=>"#"}
+								%span.lIm
+								%span.liName
+									Ремонт автоэлектрики
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuDiag
 				%span.topElement
 					Диагностика
-			%ul.dropdown.dropdown-menu
+			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
 						%span.lIm
@@ -113,7 +123,7 @@
 				%span.topElementMenuTO
 				%span.topElement
 					Плановое&nbsp;ТО
-			%ul.dropdown.dropdown-menu
+			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
 						%span.lIm
@@ -124,7 +134,7 @@
 				%span.topElementMenuInstall
 				%span.topElement
 					Установка
-			%ul.dropdown.dropdown-menu
+			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
 						%span.lIm
@@ -135,7 +145,7 @@
 				%span.topElementMenuShin
 				%span.topElement
 					Шиномонтаж
-			%ul.dropdown.dropdown-menu
+			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
 						%span.lIm
@@ -146,7 +156,7 @@
 				%span.topElementMenuService
 				%span.topElement
 					Наш&nbsp;сервис
-			%ul.dropdown.dropdown-menu
+			%ul.dropdown.dropdown-menu.level0
 				%li
 					%a{:href=>"#"}
 						%span.lIm

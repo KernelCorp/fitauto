@@ -32,7 +32,7 @@
 	
 
 
-.wrapper-dropdown-2 
+.wrapper-dropdown-top
 	/* Size and position */
 	position: relative /* Enable absolute positionning for children and pseudo elements */
 	width: 140px
@@ -45,7 +45,7 @@
 	outline: none
 	
 
-.wrapper-dropdown-2:after 
+.wrapper-dropdown-top:after
 	content: ""
 	width: 0
 	height: 0
@@ -77,6 +77,28 @@
 	a:hover
 		background-color: #ffffff
 
+.wrapper-dropdown-top .dropdown
+	z-index: 10
+	position: absolute
+	top: 100%
+	width: 220px
+	right: 0px
+	left: 0px
+	background: white
+	-webkit-transition: all 0.3s ease-out
+	-moz-transition: all 0.3s ease-out
+	-ms-transition: all 0.3s ease-out
+	-o-transition: all 0.3s ease-out
+	transition: all 0.3s ease-out
+	opacity: 0
+	pointer-events: none
+	border-bottom: 1px solid #d1d2d4
+	border-top: 1px solid #d1d2d4
+	border-right: 1px solid #d1d2d4
+	border-left: 2px solid #ed4d30
+	padding: 8px 8px 8px 0px
+	list-style: none
+
 
 .menu-element .dropdown li a
 	display: block
@@ -89,6 +111,17 @@
 	-o-transition: all 0.3s ease-out
 	transition: all 0.3s ease-out
 
+
+.wrapper-dropdown-top .dropdown li a
+	display: block
+	text-decoration: underline
+	color: #ed4d30
+	padding: 5px 10px 5px 10px
+	-webkit-transition: all 0.3s ease-out
+	-moz-transition: all 0.3s ease-out
+	-ms-transition: all 0.3s ease-out
+	-o-transition: all 0.3s ease-out
+	transition: all 0.3s ease-out
 
 
 .menu-element .dropdown li i
@@ -103,12 +136,28 @@
 	color: #231f20 !important
 	text-decoration: none
 
-li.dropdown-submenu
-	ul.dropdown-menu
-		top: 0
-		padding: 8px 8px 8px 0
 
+ul.dropdown.submenu
+	position: absolute
+	top: -1px
+	left: 100%
+	height: 101.5%
+	padding: 10px 8px 10px 0
+	margin-left: 0
+	display: none
+	border-left-width: 0
+	-webkit-border-left-widht: 0
+	-moz-border-left-widht: 0
+	background-color: #ffffff
 
+div.menu-element ul.dropdown-menu
+	box-shadow: none
+	-webkit-box-shdow: none
+	-moz-box-shadow: none
+div.menu-element ul.dropdown-menu.no-border
+	border-right-width: 0
+	-webkit-border-right-widht: 0
+	-moz-border-right-widht: 0
 .menu-element .dropdown li .lIm
 	position: relative
 	top: 3px
@@ -123,7 +172,38 @@ li.dropdown-submenu
 	border: none
 	background: url('../../img/headerMenuRight.png') no-repeat
 
+
+div.wrapper-dropdown-top ul.dropdown-menu
+	box-shadow: none
+	-webkit-box-shdow: none
+	-moz-box-shadow: none
+div.wrapper-dropdown-top ul.dropdown-menu.no-border
+	border-right-width: 0
+	-webkit-border-right-widht: 0
+	-moz-border-right-widht: 0
+.wrapper-dropdown-top .dropdown li .lIm
+	position: relative
+	top: 3px
+	padding-left: 20px
+	padding-bottom: 3px
+	border: none
+	background: url('../../img/headerMenuDot.png') no-repeat
+
+.wrapper-dropdown-top > .dropdown  a:hover .lIm
+	padding-left: 20px
+	padding-bottom: 3px
+	border: none
+	background: url('../../img/headerMenuRight.png') no-repeat
+
 /* Active state */
+
+.wrapper-dropdown-top.active:after
+	border-width: 0 4px 4px 4px
+
+
+.wrapper-dropdown-top.active .dropdown
+	opacity: 1
+	pointer-events: auto
 
 .menu-element.active:after
 	border-width: 0 4px 4px 4px
@@ -136,11 +216,11 @@ li.dropdown-submenu
 
 /* No CSS3 support */
 
-.no-opacity .wrapper-dropdown-2 .dropdown, .no-pointerevents .wrapper-dropdown-2 .dropdown
+.no-opacity .wrapper-dropdown-top .dropdown, .no-pointerevents .wrapper-dropdown-top .dropdown
 	display: none
 	opacity: 1 /* If opacity support but no pointer-events support */
 	pointer-events: auto /* If pointer-events support but no pointer-events support */
 
 
-.no-opacity       .wrapper-dropdown-2.active .dropdown, .no-pointerevents .wrapper-dropdown-2.active .dropdown
+.no-opacity  .wrapper-dropdown-top.active .dropdown, .no-pointerevents .wrapper-dropdown-top.active .dropdown
 	display: block

@@ -25,7 +25,7 @@ $(function() {
     var dd = new DropDown( $('.dd') );
 
     $(document).click(function() {
-        $('.wrapper-dropdown-2').removeClass('active');
+        $('.wrapper-dropdown-top').removeClass('active');
     });
     $('.dropdown-toggle').dropdown()
 
