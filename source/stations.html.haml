@@ -1,0 +1,132 @@
+.station
+	.left-column
+		%h4
+			ВЫБЕРИТЕ АВТОСЕРВИС
+		%form.form
+			%label
+				Ваш город:
+			%select.customSelect
+				%option
+					Новосибирск
+				%option
+					Красноярск
+				%option
+					Москва
+				%option
+					Санкт-Петербург
+
+			%label
+				Адрес автосервиса:
+			%select.customSelect
+				%option
+					ул. Мира, 67
+				%option
+					ул. Мира, 17
+				%option
+					ул. Мира, 167
+				%option
+					ул. Мира, 267
+
+			%a
+				Подробнее о станции
+
+			%button.orange
+				Записаться на обслуживание
+				%i.icon-angle-right
+
+		.director_face
+			%img{:src => 'images/director.png'}
+			.text
+				%h4.small
+					Обращение директора
+				%p
+					Главная цель F!T&nbsp;SERVICE&nbsp;- ваша безопасность на дороге. 
+					Я надеюсь что наш сервис станет вашим личный авто-доктором.
+
+
+	.right-column
+		.map
+
+		.gallery
+			.left
+				%ul#gallery
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%img{:src => 'images/stations/image_1.jpg'}
+
+			.right
+				%ul.gallery-controls
+					%li
+						%a{:href=>'#', 'data-slide-index' => 0}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 1}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 2}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 3}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 4}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 5}
+							%img{:src => 'images/stations/image_1.jpg'}
+
+				%ul.gallery-controls
+					%li
+						%a{:href=>'#', 'data-slide-index' => 6}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 7}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 8}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 9}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 10}
+							%img{:src => 'images/stations/image_1.jpg'}
+					%li
+						%a{:href=>'#', 'data-slide-index' => 11}
+							%img{:src => 'images/stations/image_1.jpg'}
+
+
+:javascript
+	$(document).ready(function(){
+		$('#gallery').bxSlider({
+		controls: false,
+		pager: true,
+		pagerCustom: '.gallery-controls',
+		mode: 'fade',
+		});
+	});
+
+	$(document).ready(function(){
+		$('.gallery-controls').bxSlider({
+		controls: true,
+		pager: false,
+		slideWidth: 100,
+		minSlides: 4,
+		maxSlides: 4,
+		slideMargin: 5
+		});
+	});
+
