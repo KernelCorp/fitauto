@@ -1,6 +1,10 @@
 #= require_tree ./vendor
 #= require_tree ./lib
+
 $(document).ready () ->
+
+	droplist = new window.droplist
+	droplist.droplist_init()
 	$('#sub1').mouseenter () ->
 		$('.dropdown.submenu#sub1').show('slow')
 		$('.dropdown-menu').addClass('no-border')
