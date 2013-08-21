@@ -42,8 +42,9 @@
     %script{:type => 'text/javascript', :src => 'javascripts/application.js'}
   %body{class: current_page.data.body_class || 'page'}
     #container
-      = partial 'header'
-      = yield
-      = partial 'footer'
+      #inner-container
+        = partial 'header'
+        = yield
+        = partial 'footer'
     -# Javascripts
 

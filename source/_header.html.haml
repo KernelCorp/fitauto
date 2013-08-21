@@ -7,6 +7,7 @@
 			%span.topElementCityIcon
 			%span.topElement
 				Москва
+			%span.header-menu-down
 			%ul.dropdown
 				%li
 					%a{ :href => "#"}
@@ -37,6 +38,7 @@
 			%span.topElementCompanyIcon
 			%span.topElement
 				Компания
+			%span.header-menu-down
 			%ul.dropdown
 				%li
 					%a{:href=>"#"}
@@ -96,27 +98,11 @@
 							%span.lIm
 							%span.liName
 								Ремонт кондиционера
-					%li.dropdown-sub#sub1
+					%li
 						%a{:href=>"#", :tabindex => "-1"}
 							%span.lIm
 							%span.liName
 								Кузовной ремонт
-					%ul.dropdown.submenu.level1#sub1
-						%li
-							%a{:href=>"#", :tabindex => "-1"}
-								%span.lIm
-								%span.liName
-									Ремонт тормозной системы
-							%li
-								%a{:href=>"#", :tabindex => "-1"}
-									%span.lIm
-									%span.liName
-										Ремонт АКПП
-							%li
-								%a{:href=>"#", :tabindex => "-1"}
-									%span.lIm
-									%span.liName
-										Ремонт подвески
 					%li
 						%a{:href=>"#"}
 							%span.lIm
@@ -127,6 +113,22 @@
 								%span.lIm
 								%span.liName
 									Ремонт автоэлектрики
+				%ul.dropdown.second-column
+					%li
+						%a{:href=>"#", :tabindex => "-1"}
+							%span.lIm
+							%span.liName
+								Ремонт тормозной системы
+						%li
+							%a{:href=>"#", :tabindex => "-1"}
+								%span.lIm
+								%span.liName
+									Ремонт АКПП
+						%li
+							%a{:href=>"#", :tabindex => "-1"}
+								%span.lIm
+								%span.liName
+									Ремонт подвески
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuDiag
@@ -134,11 +136,12 @@
 					%span.topElement-inner
 						Диагностика
 			%ul.dropdown.dropdown-menu.level0
-				%li
-					%a{:href=>"#"}
-						%span.lIm
-						%span.liName
-							О компании
+				.menu-content
+					%li
+						%a{:href=>"#"}
+							%span.lIm
+							%span.liName
+								О компании
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuTO
@@ -146,11 +149,12 @@
 					%span.topElement-inner
 						Плановое&nbsp;ТО
 			%ul.dropdown.dropdown-menu.level0
-				%li
-					%a{:href=>"#"}
-						%span.lIm
-						%span.liName
-							О компании
+				.menu-content
+					%li
+						%a{:href=>"#"}
+							%span.lIm
+							%span.liName
+								О компании
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown', :style => 'width: 255px'}
 				%span.topElementMenuInstall
@@ -158,11 +162,12 @@
 					%span.topElement-inner
 						Установка оборудования
 			%ul.dropdown.dropdown-menu.level0
-				%li
-					%a{:href=>"#"}
-						%span.lIm
-						%span.liName
-							О компании
+				.menu-content
+					%li
+						%a{:href=>"#"}
+							%span.lIm
+							%span.liName
+								О компании
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuShin
@@ -170,11 +175,12 @@
 					%span.topElement-inner
 						Шиномонтаж
 			%ul.dropdown.dropdown-menu.level0
-				%li
-					%a{:href=>"#"}
-						%span.lIm
-						%span.liName
-							О компании
+				.menu-content
+					%li
+						%a{:href=>"#"}
+							%span.lIm
+							%span.liName
+								О компании
 		.menu-element
 			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
 				%span.topElementMenuService
@@ -182,8 +188,9 @@
 					%span.topElement-inner
 						Наш&nbsp;сервис
 			%ul.dropdown.dropdown-menu.level0
-				%li
-					%a{:href=>"#"}
-						%span.lIm
-						%span.liName
-							О компании
+				.menu-content
+					%li
+						%a{:href=>"#"}
+							%span.lIm
+							%span.liName
+								О компании
