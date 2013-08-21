@@ -1,38 +1,40 @@
 .station
 	.left-column
-		%h4
-			ВЫБЕРИТЕ АВТОСЕРВИС
-		%form.form
-			%label
-				Ваш город:
-			%select.customSelect
-				%option
-					Новосибирск
-				%option
-					Красноярск
-				%option
-					Москва
-				%option
-					Санкт-Петербург
+		.select-block
+			%span.h2
+				ВЫБЕРИТЕ АВТОСЕРВИС
+			%form.form
+				%span.h3
+					Ваш город:
+				%select#city_station.customSelect
+					%option
+						Новосибирск
+					%option
+						Красноярск
+					%option
+						Москва
+					%option
+						Санкт-Петербург
 
-			%label
-				Адрес автосервиса:
-			%select.customSelect
-				%option
-					ул. Мира, 67
-				%option
-					ул. Мира, 17
-				%option
-					ул. Мира, 167
-				%option
-					ул. Мира, 267
+				%span.h3
+					Адрес автосервиса:
+				%select#address_station.customSelect
+					%option
+						ул. Мира, 67
+					%option
+						ул. Мира, 17
+					%option
+						ул. Мира, 167
+					%option
+						ул. Мира, 267
 
-			%a
-				Подробнее о станции
+				.more
+					%a
+						Подробнее о станции...
 
-			%button.orange
-				Записаться на обслуживание
-				%i.icon-angle-right
+				%button.orange
+					Записаться на обслуживание
+					%i.icon-angle-right
 
 		.director_face
 			%img{:src => 'images/director.png'}
@@ -48,65 +50,80 @@
 		.map
 
 		.gallery
+			%span.h1
+				F!T SERVICE
+				%img{:src => 'images/status/express.png'}
+				Тюменская, 91
 			.left
 				%ul#gallery
 					%li
 						%img{:src => 'images/stations/image_1.jpg'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 2'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 3'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 3'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 4'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 5'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 6'}
 					%li
-						%img{:src => 'images/stations/image_1.jpg'}
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 7'}
+					%li
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 8'}
+					%li
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 9'}
+					%li
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 10'}
+					%li
+						%img{:src => 'http://placehold.it/308x220&text=F!T SERVICE 11'}
+
+
 
 			.right
+				%span.h3
+					Зона приёмки
 				%ul.gallery-controls
 					%li
 						%a{:href=>'#', 'data-slide-index' => 0}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 1'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 1}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 2'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 2}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 3'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 3}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 4'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 4}
-							%img{:src => 'images/stations/image_1.jpg'}
-					%li
-						%a{:href=>'#', 'data-slide-index' => 5}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 5'}
 
+				%span.h3
+					Ремонтная зона
 				%ul.gallery-controls
 					%li
+						%a{:href=>'#', 'data-slide-index' => 5}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 6'}
+					%li
 						%a{:href=>'#', 'data-slide-index' => 6}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 7'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 7}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 8'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 8}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 9'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 9}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 10'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 10}
-							%img{:src => 'images/stations/image_1.jpg'}
-					%li
-						%a{:href=>'#', 'data-slide-index' => 11}
-							%img{:src => 'images/stations/image_1.jpg'}
+							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 11'}
 
 
 :javascript

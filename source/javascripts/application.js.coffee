@@ -18,4 +18,6 @@ $(document).ready () ->
 			$('.dropdown-menu').removeClass('no-border')
 		return
 
-		$('.customSelect').customSelect()
+	$('.customSelect').customSelect()
+
+	return

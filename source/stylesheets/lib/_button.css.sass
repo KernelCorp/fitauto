@@ -1,23 +1,43 @@
-%button.orange
+button.orange
+	background: none
+	border: none
 	box-sizing: content-box
 	-moz-box-sizing: content-box
 	-webkit-box-sizing: content-box
+	box-shadow: none
 	color: #fff
-	padding: 10px 20px
+	padding: 5px 10px
+	position: relative
 	font-family: PTSans-bold
+	font-weight: normal
 	font-size: 15px
+	text-align: left
 	text-decoration: none
 	text-transform: uppercase
+	width: auto
+	z-index: 1
 	i
 		font-size: 18px
+		position: absolute
+		right: 15px
+		top: 50%
+		margin-top: -10px
 
-%button.orange:before
+button.orange:before
 	box-sizing: content-box
 	-moz-box-sizing: content-box
 	-webkit-box-sizing: content-box
 	background-color: #f27d32
 	border: 7px solid #fff
 	border-radius: 12px
+	display: block
+	content: ' '
+	position: absolute
+	width: 100%
+	height: 100%
+	left: -8px
+	top: -7px
+	z-index: -1
 
 	-o-transform: skewX(-12deg)
 	-moz-transform: skewX(-12deg)
