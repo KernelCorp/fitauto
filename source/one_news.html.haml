@@ -1,13 +1,11 @@
-= stylesheet_link_tag "one_news"
 %div.content_wrapper
-  %div.content
-
-  %div.tell_friends
-    = partial "tell_friends"
-%div.right_column
-  %div.miniblogs_wrapper
-    = partial "miniblogs"
-  %div.vkgroup
-    = partial "vkgroup"
-  %div.fbgroup
-    = partial "fbgroup"
+  = partial "text_content"
+  %div.right_column
+    %div.miniblogs_wrapper
+      = partial "miniblogs"
+    %div.vkgroup
+      = partial "vkgroup"
+    %div.fbgroup
+      = partial "fbgroup"
+%div.blogs_wrapper
+  = partial 'blogs'

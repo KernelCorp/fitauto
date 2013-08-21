@@ -1,0 +1,118 @@
+$color_orange: #f27d32
+$color_red_orange: #ed4d30
+$color_light_grey: #f7f8f8
+$color_black: #231f20
+$color_grey: #56595d
+$color_white: #fff
+
+@mixin list_numbers($n)
+  @for $i from 1 through $n
+    &:nth-child(#{$i})
+      &:before
+        content: "#{$i}"
+
+.content_wrapper
+  width: 1080px
+  margin: 30px auto 0
+  position: relative
+  .content
+    color: $color_black
+    padding: 0 280px 0 0
+    position: relative
+    h1
+      font-size: 20pt
+      display: inline
+      text-transform: uppercase
+    h2
+      color: $color_grey
+      font-size: 18pt
+      text-transform: uppercase
+    h3
+      color: $color_grey
+      text-transform: uppercase
+      font-size: 16pt 
+    .newsdate
+      margin: 0px 10px 0px 0
+      padding: 5px 15px
+      display: inline-block
+      position: relative
+      top: -5px
+    .newscontent
+      padding-top: 30px
+      line-height: 25px
+      table
+        width: 100%
+        text-align: center
+        line-height: 35px
+        th
+          background-color: $color_orange
+          color: $color_white
+        tr:nth-child(even)
+          background-color: $color_light_grey
+      .numberlist
+        position: relative
+        list-style: none
+        > li
+          position: relative
+          z-index: 1
+          &:before
+            content: " "
+            width: 13px
+            height: 13px
+            padding-left: 4px
+            font-size: 10px
+            line-height: 13px
+            border-radius: 10px
+            background-color: $color_red_orange
+            color: $color_white
+            position: absolute
+            left: -22px
+            top: 3px
+            z-index: 0
+            box-sizing: border-box
+            -moz-box-sizing: border-box
+          @include list_numbers(20)
+      .orangelist
+        color: $color_red_orange
+        p
+          color: $color_black
+      .greylist
+        list-style: disc
+        color: $color_grey
+        p
+          color: $color_black
+      a.popup
+        text-decoration: none
+        border-bottom: 1px dashed $color_orange
+      .newsimage
+        margin: 0 40px 10px 0
+        border-bottom: 1px solid $color_orange
+
+.floating
+  &.left
+    float: left
+
+.uppercase
+  text-transform: uppercase
+
+.bold
+  font-weight: bold
+
+.tell_friends
+  padding: 11px 17px 17px 17px
+  margin: 0
+  border-bottom: 1px solid $color_orange
+  background-color: $color_light_grey
+  text-align: left
+  *
+    display: inline
+  script
+    display: none !important
+
+.right_column
+  position: absolute
+  top: 70px
+  right: 0
+  > div
+    margin-bottom: 20px
+
