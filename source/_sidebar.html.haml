@@ -1,11 +1,50 @@
 .sidebar-inner
   .book-service
-    %a{:href => '#'}
+    %a{:href => '#', 'data-toggle' => 'modal', 'data-target' => '#book-service-modal'}
       Записаться
       %br
       на обслуживание
       &nbsp;
       %i.icon-angle-right
+  #book-service-modal.modal.hide.fade{:tabindex=>"-1"}
+    .modal-body
+      %a{'data-dismiss' => 'modal'}
+        %span.close-modal
+      %span.h4
+        Записаться на обслуживание
+      .left-form
+        %form#book-form
+          %label
+            Город
+          %select#town
+            %option.active
+              Новосибирск
+            %option
+              Москва
+          %label
+            Адрес автосервиса
+          %select#address
+            %option
+              ул. Мира, 67
+            %option
+              ул. Мира, 67
+          %label
+            Ваше имя
+          %input#name
+          %label
+            Ваш телефон
+          %input#phone
+          %label
+            Причина обращения
+          %textarea#reason
+        .book-service
+          %a{:href => '#', 'data-toggle' => 'modal', 'data-target' => '#book-service-modal', :type => 'submit'}
+            Записаться
+      .right-map
+        %img{:src => 'images/map.jpg'}
+
+
+
   %ul.service-list
     %li
       %a{:href=>"#"}
