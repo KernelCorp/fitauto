@@ -5,17 +5,19 @@ $color_black: #231f20
 $color_grey: #56595d
 $color_white: #fff
 
+@import 'miniblogs'
+
 @mixin list_numbers($n)
   @for $i from 1 through $n
     &:nth-child(#{$i})
       &:before
         content: "#{$i}"
 
-.content_wrapper
+.text_content_wrapper
   width: 1080px
   margin: 30px auto 0
   position: relative
-  .content
+  .text_container
     color: $color_black
     padding: 0 280px 0 0
     position: relative
@@ -44,6 +46,7 @@ $color_white: #fff
         width: 100%
         text-align: center
         line-height: 35px
+        margin: 20px 0 30px
         th
           background-color: $color_orange
           color: $color_white
@@ -100,10 +103,14 @@ $color_white: #fff
 
 .tell_friends
   padding: 11px 17px 17px 17px
-  margin: 0
+  margin: 0px 0 10px
   border-bottom: 1px solid $color_orange
   background-color: $color_light_grey
   text-align: left
+  #vk_like, #fb-root, #twitter_twit
+    position: relative
+    top: 5px
+    width: 20%
   *
     display: inline
   script
@@ -116,3 +123,12 @@ $color_white: #fff
   > div
     margin-bottom: 20px
 
+.blogs_wrapper
+  .jcarousel-skin-tango
+    .jcarousel-container-horizontal
+      padding: 20px 5px
+    .jcarousel-clip-horizontal
+      height: 215px
+    .jcarousel-prev-horizontal, .jcarousel-next-horizontal
+      top: 80px
+      

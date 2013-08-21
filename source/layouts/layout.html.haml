@@ -37,15 +37,20 @@
 
     %script{:type => 'text/javascript', :src => 'javascripts/jquery.min.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/jquery.bxslider.js'}
+    %script{:type => 'text/javascript', :src => 'javascripts/jquery.customSelect.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/bootstrap.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/ready.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/modernizr.custom.79639.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/jquery.jcarousel.min.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/application.js'}
+    %script{:type => "text/javascript", :src => "//vk.com/js/api/openapi.js?98"}
+    %script{:type => "text/javascript"}
+      VK.init({apiId: 3831693, onlyWidgets: true});
   %body{class: current_page.data.body_class || 'page'}
     #container
-      = partial 'header'
-      = yield
-      = partial 'footer'
+      #inner-container
+        = partial 'header'
+        = yield
+        = partial 'footer'
     -# Javascripts
 

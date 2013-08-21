@@ -1,17 +1,12 @@
-%div.text_content_wrapper
-  %div.text_container
-    = partial "text_content"
-    %div.tell_friends
-      = partial "tell_friends"
-    %div.comment_section
-      = partial "vkcomments"
+%div.content_wrapper
+  = partial "text_content"
   %div.right_column
     %div.miniblogs_wrapper
       = partial "miniblogs"
     %div.vkgroup
       = partial "vkgroup"
     %div.fbgroup
-      = partial "fbgroup"
+      = partial "fbgroup":w
 %div.blogs_wrapper
   .blog-list-container
     %span.all-records

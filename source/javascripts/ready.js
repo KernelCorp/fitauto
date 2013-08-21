@@ -35,4 +35,7 @@ jQuery(document).ready(function() {
     jQuery('#mycarousel').jcarousel({
         wrap: 'circular'
     });
+	 jQuery('#blogCarusel').jcarousel({
+		wrap: 'circular'
+	});
 });

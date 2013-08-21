@@ -1,5 +1,4 @@
 $color_orange: #f27d32
-$color_black: #000
 $color_light_grey: #f7f8f8
 
 .miniblogs
@@ -12,16 +11,24 @@ $color_light_grey: #f7f8f8
   a
     color: $color_orange
     text-decoration: underline
+    &:hover
+      color: $color_black
   li
     position: relative
-    top: 3px
-    padding-left: 20px
-    padding-bottom: 3px
-    border: none
-    background: url('../../img/headerMenuDot.png') no-repeat
-    a:hover
-      padding-left: 20px
+    .back
+      position: relative
+      display: inline
+      top: 3px
+      padding-left: 15px
       padding-bottom: 3px
       border: none
-      background: url('../../img/headerMenuRight.png') no-repeat
+      background: url('../../img/headerMenuDot.png') no-repeat
+    a
+      p
+        display: inline
+      &:hover .back
+        padding-left: 15px
+        padding-bottom: 3px
+        border: none
+        background: url('../../img/headerMenuRight.png') no-repeat
     
