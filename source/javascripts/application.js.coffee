@@ -17,3 +17,5 @@ $(document).ready () ->
 			$('.dropdown.submenu#sub1').hide('slow')
 			$('.dropdown-menu').removeClass('no-border')
 		return
+
+		$('.customSelect').customSelect()
