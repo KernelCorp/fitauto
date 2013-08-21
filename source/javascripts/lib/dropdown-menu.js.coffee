@@ -7,8 +7,11 @@ class window.dropdown_menu
 			return
 
 		$('.menu-element .wrapper-dropdown-2').mouseleave (e)->
-			if !$(e.toElement).parents('.dropdown').length && !$(e.toElement).hasClass('dropdown')
+			target =  e.toElement
+			if !target
+				target = e.relatedTarget
+			if !$(target).parents('.dropdown').length && !$(target).hasClass('dropdown')
 				$(this).parent().removeClass('open')
 		$('.menu-element .dropdown').mouseleave (e) ->
-			if !$(e.toElement).parents('.wrapper-dropdown-2').length && !$(e.toElement).hasClass('.wrapper-dropdown-2')
+			if !$(target).parents('.wrapper-dropdown-2').length && !$(target).hasClass('.wrapper-dropdown-2')
 				$(this).parent().removeClass('open')
