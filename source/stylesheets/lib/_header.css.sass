@@ -10,9 +10,10 @@
 	margin-left: 3px
 
 #header
+	padding-bottom: 27px
 	.wrapper-dropdown-top
 		span.header-menu-down
-			background: url('../../img/headerMenuDown.png') no-repeat
+			background: url('../img/headerMenuDown.png') no-repeat
 			height: 10px
 			width: 10px
 			position: absolute
@@ -41,19 +42,19 @@
 	
 
 #header .topLinks .topElementCompanyIcon
-	background: url('../../img/headerCompanyMini.png') no-repeat
+	background: url('../img/headerCompanyMini.png') no-repeat
 	
 #header .topLinks .topElementCityIcon 
-	background: url('../../img/headerCityMini.png') no-repeat
+	background: url('../img/headerCityMini.png') no-repeat
 	
 #header .topLinks .topElementCompanyService 
-	background: url('../../img/headerServiceMini.png') no-repeat
+	background: url('../img/headerServiceMini.png') no-repeat
 	
 #header .topLinks .topElementCompanyBlog 
-	background: url('../../img/headerBlogMini.png') no-repeat
+	background: url('../img/headerBlogMini.png') no-repeat
 	
 #header .topLinks .topElementCompanyFranch 
-	background: url('../../img/headerFranMini.png') no-repeat
+	background: url('../img/headerFranMini.png') no-repeat
 	
 #header .topLinks .city
 	float: left
@@ -67,12 +68,16 @@
 #header .topLinks .company, #header .topLinks .franch, #header .topLinks .blog, #header .topLinks .auto
 	float: right
 	padding: 10px 15px 10px 5px
+#header .topLinks .franch, #header .topLinks .blog, #header .topLinks .auto
+	a:hover
+		span.topElement
+			border-bottom: 0
 
 
 #header .topLogo
 	height: 100px
 	width: 570px
-	background: url('../../img/headerTopLogo.png') no-repeat
+	background: url('../img/headerTopLogo.png') no-repeat
 	position: absolute
 	z-index: 2
 
@@ -88,15 +93,15 @@
 
 
 #header .topLogo .linkAddService
-	top: 19px
-	left: 230px
+	top: 21px
+	left: 219px
 	position: absolute
 	display: block
 	background: none
 	height: 25px
-	width: 270px
+	width: 300px
 	color: #ffffff
-	font-size: 13px
+	font-size: 14px
 	font-weight: bold
 	text-transform: uppercase
 	text-decoration: none
@@ -135,7 +140,7 @@
 		margin-left: 15px
 		span.service-book
 			position: absolute
-			background: url('../../img/service-book.png') no-repeat
+			background: url('../img/service-book.png') no-repeat
 			width: 20px
 			height: 20px
 			top: 0
@@ -156,7 +161,8 @@
 		span.work-time
 			font-family: PTSans
 			color: #ffffff
-			float: left
+			float: right
+			padding-right: 10px
 #header .topLogo .linkServiceBook
 	top: 40px
 	right: 300px
@@ -175,7 +181,6 @@
 
 
 #header .mainMenu .element
-	min-width: 165px
 	height: 50px
 	text-decoration: underline
 	cursor: pointer
@@ -190,17 +195,16 @@
 	top: 16px
 
 
-#header .mainMenu .element:hover .topElement
-	margin-left: -45px
-	/*padding-right: 54px
-	border: 2px solid #f1711c
-	border-left: none
-	border-radius: 25px
-	padding: 10px 1px 10px 45px
-	position: relative
-	z-index: 2
+#header .mainMenu .menu-element.open .element .topElement
+	border-top: 2px solid #f17522
+	border-bottom: 2px solid #f17522
+	padding: 10px 15px 10px 30px
+	border-radius: 15px
+	margin-left: -30px
 
-#header .mainMenu .element:hover .topElement .topElement-inner
+
+
+#header .mainMenu .menu-element.open .element .topElement .topElement-inner
 	margin-left: -43px
 	/*padding-right: 54px
 	background-color: #f1711c
@@ -221,19 +225,19 @@
 
 
 #header .mainMenu .topElementMenuRepair
-	background: url('../../img/headerMenuTopRepair.png') no-repeat
+	background: url('../img/headerMenuTopRepair.png') no-repeat
 
 #header .mainMenu .topElementMenuDiag
-	background: url('../../img/headerMenuTopDiag.png') no-repeat
+	background: url('../img/headerMenuTopDiag.png') no-repeat
 
 #header .mainMenu .topElementMenuTO
-	background: url('../../img/headerMenuTopTO.png') no-repeat
+	background: url('../img/headerMenuTopTO.png') no-repeat
 
 #header .mainMenu .topElementMenuInstall
-	background: url('../../img/headerMenuTopInstall.png') no-repeat
+	background: url('../img/headerMenuTopInstall.png') no-repeat
 
 #header .mainMenu .topElementMenuShin
-	background: url('../../img/headerMenuTopShin.png') no-repeat
+	background: url('../img/headerMenuTopShin.png') no-repeat
 
 #header .mainMenu .topElementMenuService
-	background: url('../../img/headerMenuTopService.png') no-repeat
+	background: url('../img/headerMenuTopService.png') no-repeat
