@@ -1,0 +1,13 @@
+.paginator
+	%a.prev{:href => '#'}
+		%i.icon-chevron-left
+
+	- current = rand(9) + 1
+	- 1.upto(9) do |i|
+		- if i == current
+			=	i
+		- else
+			%a{:href => '#'}
+				= i
+	%a.next{:href => '#'}
+		%i.icon-chevron-right
