@@ -48,7 +48,7 @@ end
 #   end
 # end
 
-page "main.html", :layout => :layout
+page 'success_history.html', :layout => :layout_min
 
 set :css_dir, 'stylesheets'
 
