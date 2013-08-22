@@ -135,7 +135,7 @@
 			right: 10px
 			width: 18px
 			height: 18px
-			background: url(/images/close.png) no-repeat
+			background: url(../images/close.png) no-repeat
 	.modal-body
 		padding: 30px 20px
 		.h4
@@ -167,13 +167,47 @@
 		height: 30px
 	textarea
 		height: 80px
+		resize: none
 	input, select, textarea
 		margin-bottom: 15px
 		font-family: 'PTSans'
-		border: none
-		box-shadow: 1px 2px #cccccc,  -1px -1px #cccccc
-		-moz-box-shadow: 1px 2px #cccccc,  -1px -1px #cccccc
-		-webkit-box-shadow: 1px 2px #cccccc,  -1px -1px #cccccc
+		border: 1px solid #f5f5f5
+		box-shadow: 0 2px #cccccc
+		-moz-box-shadow: 0 2px #cccccc
+		-webkit-box-shadow: 0 2px #cccccc
 		border-radius: 0
 		-moz-border-radius: 0
 		-webkit-border-radius: 0
+	select
+		display: inline-block
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		cursor: pointer
+	@media screen and (-webkit-min-device-pixel-ratio: 0)
+		select
+			padding-right: 18px
+	label.select-wrap
+		position: relative
+	label.select-wrap:after
+		content: ''
+		background-color: #ffffff
+		height: 20px
+		width: 20px
+		background: url(/images/select-down-arrow.jpg) no-repeat
+		right: 5px
+		top: 5px
+		position: absolute
+		pointer-events: none
+
+	label.select-wrap:before
+		content: ''
+		right: 6px
+		top: 3px
+		width: 40px
+		height: 23px
+		background: #ffffff
+		position: absolute
+		pointer-events: none
+		display: block
+
