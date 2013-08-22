@@ -4,17 +4,20 @@ button.orange
 	box-sizing: content-box
 	-moz-box-sizing: content-box
 	-webkit-box-sizing: content-box
-	box-shadow: none
 	color: #fff
 	padding: 5px 10px
 	position: relative
 	font-family: PTSans-bold
 	font-weight: normal
 	font-size: 15px
+	min-height: 38px
+	margin-top: 20px
+	padding-right: 30px
 	text-align: left
 	text-decoration: none
 	text-transform: uppercase
 	width: auto
+	overflow: visible
 	z-index: 1
 	i
 		font-size: 18px
@@ -30,6 +33,10 @@ button.orange:before
 	background-color: #f27d32
 	border: 7px solid #fff
 	border-radius: 12px
+	-o-box-shadow: 0 0 1px #e0e1e3
+	-ms-box-shadow: 0 0 1px #e0e1e3
+	-webkit-box-shadow: 0 0 1px #e0e1e3
+	box-shadow: 0 0 1px #e0e1e3
 	display: block
 	content: ' '
 	position: absolute
@@ -40,6 +47,7 @@ button.orange:before
 	z-index: -1
 
 	-o-transform: skewX(-12deg)
+	-ms-transform: skewX(-12deg)
 	-moz-transform: skewX(-12deg)
 	-webkit-transform: skewX(-12deg)
 	transform: skewX(-12deg)

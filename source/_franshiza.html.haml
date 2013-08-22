@@ -1,0 +1,35 @@
+.franshiza_container
+	.elem3
+		%img{:src => 'images/manager.jpg'}
+		%span.h3.small
+			Менеджер по продаже франшизы
+		Иванов Иван Иванович
+	.elem3
+		%span.h3.small
+			ЗАЯВКА НА ФРАНШИЗУ
+		%form.form-horizontal
+			%label{:for => 'user_city'}
+				Ваш город
+			%input{:type => 'text', :id => 'user_city', :value => 'Новосибирск'}
+
+			%label{:for => 'user_fio'}
+				Ф.И.О.
+			%input{:type => 'text', :id => 'user_fio', :value => ''}
+
+			%label{:for => 'user_phone'}
+				Ваш телефон
+			%input{:type => 'text', :id => 'user_phone', :value => 'Новосибирск'}
+
+			%button.orange
+				ОТПРАВИТЬ ЗАЯВКУ
+				%i.icon-angle-right
+
+	.elem3
+		%span.h3.small
+			ФРАНШИЗ ПРОДАНО
+		.number
+			1
+		.number
+			2
+		.number
+			7
