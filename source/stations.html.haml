@@ -39,15 +39,21 @@
 		.director_face
 			%img{:src => 'images/director.png'}
 			.text
-				%h4.small
+				%span.h3
 					Обращение директора
 				%p
-					Главная цель F!T&nbsp;SERVICE&nbsp;- ваша безопасность на дороге. 
-					Я надеюсь что наш сервис станет вашим личный авто-доктором.
+					Главная цель F!T&nbsp;SERVICE&nbsp;-
+					%br
+					ваша безопасность на дороге.
+					%br
+					Я надеюсь что наш сервис станет
+					%br
+					вашим личный авто-доктором.
 
 
 	.right-column
 		.map
+			%img{:src => 'http://placehold.it/800x366&text=YANDEX MAPS'}
 
 		.gallery
 			%span.h1
@@ -140,10 +146,10 @@
 		$('.gallery-controls').bxSlider({
 		controls: true,
 		pager: false,
-		slideWidth: 100,
+		slideWidth: 103,
 		minSlides: 4,
 		maxSlides: 4,
-		slideMargin: 5
+		slideMargin: 10
 		});
 	});
 
