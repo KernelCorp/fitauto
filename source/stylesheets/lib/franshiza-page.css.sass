@@ -1,0 +1,172 @@
+.franshiza
+	margin-bottom: 40px
+	padding-right: 10px
+	margin-right: -10px
+	.example_buildings
+		border-bottom: 5px solid #f7f8f8
+		margin-top: 35px
+
+		.current
+			display: inline-block
+			margin-left: 10px
+			width: 484px
+			vertical-align: bottom
+
+		.other
+			display: inline-block
+			vertical-align: bottom
+			text-align: right
+			width: 585px
+			margin-right: -5px
+			padding-right: 8px
+
+			.elem
+				position: relative
+				display: inline-block
+				vertical-align: bottom
+				height: 130px
+				text-align: left
+				width: 168px
+				margin-left: 43px
+				a
+					border-bottom: 1px dashed #ed4d30
+					display: inline-block
+					line-height: 18px
+					text-decoration: none
+					font:
+						family: PTSans
+						weight: normal
+						size: 20px
+
+				img
+					position: absolute
+					left: 0
+					bottom: 0
+
+	.bottom-block
+		.left-block
+			display: inline-block
+			vertical-align: top
+			margin-top: 27px
+			margin-right: 40px
+			width: 330px
+			.elem
+				border-radius: 0
+				border: none
+				a.toggler
+					display: inline-block
+					margin-bottom: 20px
+					color: #ed4d30
+					font-size: 18px
+					text-decoration: none
+					outline: none
+
+					span.h3
+						display: inline-block
+						line-height: 18px
+						color: #ed4d30
+						text-transform: uppercase
+						margin: 0
+						border-bottom: 1px dashed #ed4d30
+
+					i.icon-angle-down
+						display: none
+					i.icon-angle-up
+						display: inline
+
+				a.toggler.collapsed
+					i.icon-angle-down
+						display: inline
+					i.icon-angle-up
+						display: none
+
+				.panel-body
+					padding-bottom: 20px
+
+				.description
+					overflow: hidden
+
+		.right-block
+			display: inline-block
+			vertical-align: top
+			width: 706px
+
+			span.h3
+				margin: 23px 0 20px
+				line-height: 16px
+
+			.buy-button-block
+				margin-top: 15px
+				text-align: right
+
+				.orange
+					min-height: 16px
+					padding: 14px 30px 14px 16px
+
+			.plan
+				display: inline-block
+				vertical-align: top
+				width: 335px
+				margin-right: 34px
+
+				img
+					margin-bottom: 15px
+
+			.example-gallery
+				display: inline-block
+				vertical-align: top
+				width: 336px
+				margin-right: -5px
+
+				.top
+					width: 336px
+					height: 239px
+					margin-bottom: 15px
+
+					img
+						width: 332px
+						height: 239px
+
+				.controls-block
+					position: relative
+					width: 336px
+
+					.bx-wrapper
+						margin-bottom: 15px
+
+					.prev-link,
+					.next-link
+						background-color: #fff
+						border-radius: 30px
+						display: block
+						width: 30px
+						height: 30px
+						margin-top: -15px
+						position: absolute
+						top: 50%
+						left: -10px
+						z-index: 1
+
+					.prev-link:before,
+					.next-link:before
+						background: url(../images/navigation.png) left top no-repeat #fff
+						content: ' '
+						display: block
+						border-radius: 30px
+						position: absolute
+						left: 7px
+						top: 5px
+						width: 12px
+						height: 21px
+
+					.next-link
+						left: auto
+						right: -10px
+					.next-link:before
+						background-position: -13px 0
+						left: auto
+						right: 7px
+
+#Express_building,
+#Standart_building
+	display: none

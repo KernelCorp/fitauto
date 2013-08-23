@@ -209,11 +209,7 @@
 				maxWidth: getViewportMaxWidth()
 			});
 			// make modification to the wrapper (.bx-wrapper)
-			if(!slider.settings.pager) {
-				slider.viewport.parent().css({
-				margin: '0'
-				});
-			}
+
 			// apply css to all slider children
 			slider.children.css({
 				'float': slider.settings.mode == 'horizontal' ? 'left' : 'none',
@@ -624,17 +620,29 @@
 		 * Appends prev / next controls to the controls element
 		 */
 		var appendControls = function(){
-			slider.controls.next = $('<a class="bx-next" href="">' + slider.settings.nextText + '</a>');
-			slider.controls.prev = $('<a class="bx-prev" href="">' + slider.settings.prevText + '</a>');
+			if (!$(slider.settings.nextSelector).is('a'))
+			{
+				slider.controls.next = $('<a class="bx-next" href="">' + slider.settings.nextText + '</a>');
+			}
+			else {
+				slider.controls.next = $(slider.settings.nextSelector);
+			}
+			if (!$(slider.settings.prevSelector).is('a'))
+			{
+				slider.controls.prev = $('<a class="bx-prev" href="">' + slider.settings.prevText + '</a>');
+			}
+			else {
+				slider.controls.prev = $(slider.settings.prevSelector);
+			}
 			// bind click actions to the controls
 			slider.controls.next.bind('click', clickNextBind);
 			slider.controls.prev.bind('click', clickPrevBind);
 			// if nextSlector was supplied, populate it
-			if(slider.settings.nextSelector){
+			if(slider.settings.nextSelector && !$(slider.settings.nextSelector).is('a')){
 				$(slider.settings.nextSelector).append(slider.controls.next);
 			}
 			// if prevSlector was supplied, populate it
-			if(slider.settings.prevSelector){
+			if(slider.settings.prevSelector && !$(slider.settings.prevSelector).is('a')){
 				$(slider.settings.prevSelector).append(slider.controls.prev);
 			}
 			// if no custom selectors were supplied
