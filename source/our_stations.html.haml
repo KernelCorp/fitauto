@@ -1,0 +1,68 @@
+.left-sidebar
+	.sidebar-inner
+		%span.h2
+			Выберете автосервис
+		%form.form#choose-service
+			%label
+				Ваш город
+			%select.customSelect#town
+				%option
+					Новосибирск
+				%option
+					Москва
+			%label
+				Адрес автосервиса
+			%select.customSelect#address
+				%option
+					ул. Мира, 67
+				%option
+					ул. Мира, 67
+			%a{:href => '#'}
+				Подробнее о станции...
+			.book-service
+				%a{:href => '#', 'data-toggle' => 'modal', 'data-target' => '#book-service-modal'}
+					Записаться
+					%br
+					на обслуживание
+					&nbsp;
+					%i.icon-angle-right
+			#book-service-modal.modal.hide.fade{:tabindex=>"-1"}
+				.modal-body
+					%a{'data-dismiss' => 'modal'}
+						%span.close-modal
+					%span.h4
+						Записаться на обслуживание
+					%form#book-form.form
+						.form-section
+							%label
+								Город
+							%select#town.customSelect
+								%option.active
+									Новосибирск
+								%option
+									Москва
+						.form-section.right-section
+							%label
+								Адрес автосервиса
+							%select#address.customSelect
+								%option
+									ул. Мира, 67
+								%option
+									ул. Мира, 67
+						.form-section
+							%label
+								Ваше имя
+							%input#name
+						.form-section.right-section
+							%label
+								Ваш телефон
+							%input#phone
+						.form-section
+							%label
+								Причина обращения
+							%textarea#reason
+						.book-service
+							%a{:href => '#', 'data-toggle' => 'modal', 'data-target' => '#book-service-modal', :type => 'submit'}
+								Записаться
+.right-content
+	%img{:src => '../images/large-map.png'}
