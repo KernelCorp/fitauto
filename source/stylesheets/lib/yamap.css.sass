@@ -1,9 +1,131 @@
+$bgcolor_express: #7eceee
+$bgcolor_standard: #e2e4e5
+$bgcolor_premium: #fbd732
+$fgcolor_description: #87d1ef
+
 #yamap
-  width: 300px
-  height: 300px
+  width: 900px
+  height: 600px
   display: block
-  .ymaps-b-balloon__sprite_type_tail
-    background: url('http://lorempixel.com/50/50/cats')
-  .ymaps-b-balloon__sprite
-    background: none
-    background-color: #fff
+  .date
+    margin: -32px 0 0 -40px
+    position: relative
+    &:before
+      border: 4px solid #fff
+    p
+      text-align: center
+      font-family: PTSans
+      color: #000
+      margin: 0
+      width: 50px
+      &:after
+        content: " "
+        width: 17px
+        height: 15px
+        position: absolute
+        margin: 0 auto
+        left: 0
+        bottom: -11px
+        right: 0
+    &.marker_wrapper
+      &.express
+        &:before
+          background-color: $bgcolor_express
+        p
+          &:after
+            background-image: url('../../images/express_end.png')
+      &.standard
+        &:before
+          background-color: $bgcolor_standard
+        p
+          &:after
+            background-image: url('../../images/standard_end.png')
+      &.premium
+        &:before
+          background-color: $bgcolor_premium
+        p
+          &:after
+            background-image: url('../../images/premium_end.png')
+  .balloon_wrapper
+    width: 300px
+    height: 365px
+    bottom: 15px
+    left: -150px
+    right: 0
+    margin: 0 auto
+    position: absolute
+    background-color: white
+    &:before
+      content: ""
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-top: 16px solid white
+      width: 16px
+      height: 16px
+      position: absolute
+      bottom: -15px
+      left: 0
+      right: 0
+      margin: 0 auto
+    .balloon_image
+      width: 300px
+      height: 180px
+      overflow: hidden
+      position: relative
+      .balloon_close
+        position: absolute
+        top: 5px
+        right: 5px
+        width: 17px
+        height: 17px
+        background-image: url('../../images/balloon_close.png')
+      .balloon_absolute
+        position: absolute
+        bottom: 0
+        right: -6px
+        font-size: 17pt
+        padding: 2px 10px
+        color: black
+        &.date
+          font-family: PTSans
+          &:before
+            border: 0
+            border-radius: 0
+          &.express
+            &:before
+              background-color: $bgcolor_express
+          &.standatd
+            &:before
+              background-color: $bgcolor_standard
+          &.premium
+            &:before
+              background-color: $bgcolor_premium
+    .description_wrapper
+      padding: 10px 20px 25px 20px
+      line-height: 23px
+      border: 1px solid lightgrey
+      p, a
+        color: $fgcolor_description
+        margin: 0
+        padding: 0
+      a
+        text-decoration: underline
+      .services
+        list-style: none
+        display: inline-block
+        &:before
+          content: "Услуги:"
+          font-weight: bold
+          color: #000
+        li
+          background-image: url('../../images/services.png')
+        .repair
+          background-position: 0 0
+        .diagnostics
+          background-position: -23px 0
+        .plan
+          background-position: -46px 0
+        .replace
+          background-position: -69px 0
+        .tireservice
+          background-position: -92px 0
