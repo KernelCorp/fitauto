@@ -51,8 +51,10 @@ end
 page "yamap.html", :layout => false
 
 page "main.html", :layout => :layout
+page 'success_details.html', :layout => :layout_min
 page 'success_history.html', :layout => :layout_min
 page 'presentations.html',   :layout => :layout_min
+page 'franshiza.html',			 :layout => :layout_min
 
 set :css_dir, 'stylesheets'
 
