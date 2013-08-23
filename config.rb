@@ -48,6 +48,7 @@ end
 #   end
 # end
 
+page 'success_details.html', :layout => :layout_min
 page 'success_history.html', :layout => :layout_min
 page 'presentations.html',   :layout => :layout_min
 
