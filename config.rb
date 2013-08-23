@@ -48,6 +48,8 @@ end
 #   end
 # end
 
+page "yamap.html", :layout => false
+
 page "main.html", :layout => :layout
 
 set :css_dir, 'stylesheets'
