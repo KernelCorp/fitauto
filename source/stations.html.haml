@@ -4,7 +4,7 @@
 			%span.h2
 				ВЫБЕРИТЕ АВТОСЕРВИС
 			%form.form
-				%span.h3
+				%span.h4.with-top-margin
 					Ваш город:
 				%select#city_station.customSelect
 					%option
@@ -16,7 +16,7 @@
 					%option
 						Санкт-Петербург
 
-				%span.h3
+				%span.h4.with-top-margin
 					Адрес автосервиса:
 				%select#address_station.customSelect
 					%option
@@ -33,7 +33,7 @@
 						Подробнее о станции...
 
 				%button.orange
-					Записаться на обслуживание
+					Записаться на&nbsp;обслуживание
 					%i.icon-angle-right
 
 		.director_face
@@ -95,61 +95,59 @@
 				%ul.gallery-controls
 					%li
 						%a{:href=>'#', 'data-slide-index' => 0}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 1'}
+							%img{:src => 'images/stations/image_1.jpg'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 1}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 2'}
+							%img{:src => 'http://placehold.it/102x80&text=2'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 2}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 3'}
+							%img{:src => 'http://placehold.it/102x80&text=3'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 3}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 4'}
+							%img{:src => 'http://placehold.it/102x80&text=4'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 4}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 5'}
+							%img{:src => 'http://placehold.it/102x80&text=5'}
 
 				%span.h3
 					Ремонтная зона
 				%ul.gallery-controls
 					%li
 						%a{:href=>'#', 'data-slide-index' => 5}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 6'}
+							%img{:src => 'http://placehold.it/102x80&text=6'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 6}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 7'}
+							%img{:src => 'http://placehold.it/102x80&text=7'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 7}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 8'}
+							%img{:src => 'http://placehold.it/102x80&text=8'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 8}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 9'}
+							%img{:src => 'http://placehold.it/102x80&text=9'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 9}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 10'}
+							%img{:src => 'http://placehold.it/102x80&text=10'}
 					%li
 						%a{:href=>'#', 'data-slide-index' => 10}
-							%img{:src => 'http://placehold.it/102x80&text=F!T SERVICE 11'}
+							%img{:src => 'http://placehold.it/102x80&text=11'}
 
 
 :javascript
 	$(document).ready(function(){
 		$('#gallery').bxSlider({
-		controls: false,
-		pager: true,
-		pagerCustom: '.gallery-controls',
-		mode: 'fade',
+			controls: false,
+			pager: true,
+			pagerCustom: '.gallery-controls',
+			mode: 'fade',
 		});
-	});
 
-	$(document).ready(function(){
 		$('.gallery-controls').bxSlider({
-		controls: true,
-		pager: false,
-		slideWidth: 103,
-		minSlides: 4,
-		maxSlides: 4,
-		slideMargin: 10
+			controls: true,
+			pager: false,
+			slideWidth: 103,
+			minSlides: 4,
+			maxSlides: 4,
+			slideMargin: 10
 		});
 	});
 
