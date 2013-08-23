@@ -9,7 +9,7 @@
 # Change Compass configuration
 compass_config do |config|
    config.output_style = :compact
-   config.line_comments = false
+   config.line_comments = true
 end
 
 ###
@@ -51,6 +51,8 @@ end
 page "yamap.html", :layout => false
 
 page "main.html", :layout => :layout
+page 'success_history.html', :layout => :layout_min
+page 'presentations.html',   :layout => :layout_min
 
 set :css_dir, 'stylesheets'
 

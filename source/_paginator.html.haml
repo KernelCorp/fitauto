@@ -5,7 +5,8 @@
 	- current = rand(9) + 1
 	- 1.upto(9) do |i|
 		- if i == current
-			=	i
+			%span.current
+				=	i
 		- else
 			%a{:href => '#'}
 				= i
