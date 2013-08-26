@@ -1,3 +1,4 @@
+%script{:type => "text/javascript", :charset => "utf-8", :src => "http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU"}
 .left-sidebar
 	.sidebar-inner
 		%span.h2
@@ -65,4 +66,5 @@
 							%a{:href => '#', 'data-toggle' => 'modal', 'data-target' => '#book-service-modal', :type => 'submit'}
 								Записаться
 .right-content
-	%img{:src => '../images/large-map.png'}
+	#yamap
+= javascript_include_tag 'yamap'

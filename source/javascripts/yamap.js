@@ -38,6 +38,19 @@ var yamap;
 						$(".balloon_close").off("click");
 						balloonTemplate.superclass.clear.call(this);
 					},
+					rebuild: function() {
+
+					}
+					getClientBoundingRect: function() {
+						var $balloon = $(".balloon_wrapper"),
+							$parent = $balloon.parent(),
+							top = $balloon.position().top - $parent.position().top,
+							left = $balloon.position().left - $parent.position().left,
+							bottom = top + $balloon.height(),
+							right = left + $balloon.width(),
+							ret = [[left, top], [right, bottom]];
+						return ret;
+					},
 					_close: function(e) {
 						e.preventDefault();
 						this.events.fire("userclose");
@@ -54,6 +67,7 @@ var yamap;
 			balloonShadowImageHref: 'images/marker_shadow.png',
 			balloonShadowImageSize: [93, 17],
 			balloonShadowImageOffset: [-37, -14],
+			balloonPane: 'outers',
 			iconLayout: "fitauto#markerTemplate",
 			balloonLayout: "fitauto#balloonTemplate"
 		});
@@ -119,8 +133,8 @@ var yamap;
 
 		}));
 
-		for(var i = 0, l = placemarks.length; i < l; i++)
+		for(var i = 0, l = placemarks.length; i < l; i++) {
 			yamap.geoObjects.add(placemarks[i]);
+		}
 	});
-
 })()

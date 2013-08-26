@@ -1,3 +1,5 @@
+%script{:type => "text/javascript", :charset => "utf-8", :src => "http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU"}
+
 .station
 	.left-column
 		.select-block
@@ -53,8 +55,8 @@
 
 	.right-column
 		.map
-			%img{:src => 'http://placehold.it/800x366&text=YANDEX MAPS'}
-
+			#yamap{:style => 'height: 366px; width: 800px'}
+			= javascript_include_tag 'yamap'
 		.gallery
 			%span.h1
 				F!T SERVICE
