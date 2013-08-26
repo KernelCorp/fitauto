@@ -38,9 +38,6 @@ var yamap;
 						$(".balloon_close").off("click");
 						balloonTemplate.superclass.clear.call(this);
 					},
-					rebuild: function() {
-
-					}
 					getClientBoundingRect: function() {
 						var $balloon = $(".balloon_wrapper"),
 							$parent = $balloon.parent(),
@@ -67,7 +64,7 @@ var yamap;
 			balloonShadowImageHref: 'images/marker_shadow.png',
 			balloonShadowImageSize: [93, 17],
 			balloonShadowImageOffset: [-37, -14],
-			balloonPane: 'outers',
+			//balloonPane: 'outers',
 			iconLayout: "fitauto#markerTemplate",
 			balloonLayout: "fitauto#balloonTemplate"
 		});
