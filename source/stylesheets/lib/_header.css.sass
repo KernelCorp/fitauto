@@ -10,7 +10,7 @@
 	margin-left: 3px
 
 #header
-	padding-bottom: 27px
+	padding-bottom: 35px
 	.wrapper-dropdown-top
 		span.header-menu-down
 			background: url('../img/headerMenuDown.png') no-repeat
@@ -189,50 +189,39 @@
 .menu-element
 	float: left
 	position: relative
-	margin-right: 16px
+//	padding-right: 19px
 
-.menu-element.open
-	float: left
-	position: relative
-	margin-right: 0
+
 
 #header .mainMenu .topElement
 	text-transform: uppercase
 	position: relative
 	top: 16px
 
+.mainMenu
+	padding-left: 6px
+	margin-top: -10px
 
-#header .mainMenu .menu-element.open .element .topElement
-	border-top: 2px solid #f17522
-	border-bottom: 2px solid #f17522
-	padding: 9px 15px 9px 36px
-	border-radius: 15px
-	margin-left: -33px
-	position: relative
-	box-shadow: 0 -1px #f8b890, 0 1px #f8b890
-	z-index: 1
+.menu-element
+	.topElement
+		padding: 0 19px 0 6px
+		display: inline-block
+		span.round-end
+			position: absolute
+			right: 0
+			top: -1px
+			width: 20px
+			height: 40px
+	.topElement-inner
+		padding: 9px 0 9px 22px
+		margin-left: -22px
+		display: inline-block
+
+.menu-element.open
+	.topElement-inner
+		background: url(../images/menu_elem_active_background.png) repeat-x
 	span.round-end
-		width: 20px
-		height: 45px
-		background: url('../images/headerMenuRoundEndCopy.png') no-repeat
-		position: absolute
-		top: -5px
-		right: -5px
-		z-index: 2
-
-#header .mainMenu .menu-element.open .element .topElement .topElement-inner
-	margin-left: -43px
-	/*padding-right: 54px
-	background-color: #f1711c
-	border: 2px solid #ffffff
-	border-left: none
-	border-radius: 20px
-	padding: 7px 15px 7px 40px
-	position: relative
-	z-index: 3
-
-#header .mainMenu .topElement .topElement-inner
-	padding-right: 10px
+		background: url(../images/menu_element_active_round_end.png) no-repeat
 
 /* topElementMenuRepair topElementMenuDiag topElementMenuTO topElementMenuInstall topElementMenuShin topElementMenuService*/
 .topElementMenuRepair, .topElementMenuDiag, .topElementMenuTO, .topElementMenuInstall, .topElementMenuShin, .topElementMenuService
