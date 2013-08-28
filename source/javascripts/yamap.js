@@ -23,18 +23,56 @@ var yamap;
 				"<li class='replace'></li>",
 				"<li class='tireservice'></li>",
 				"</ul>",
+				"<div class='repair active'>",
 				"<p>($[properties.phone.code]) <b>$[properties.phone.number]</b></p>",
 				"<p>$[properties.address]</p>",
 				"<p><b>Время работы:</b></p>",
 				"<p>$[properties.time.when]: <b>$[properties.time.how]</b></p>",
-				"<a href='$[properties.more.direction]'>$[properties.more.what]</a>",
+				"<a href='$[properties.more.direction]'>$[properties.more.what.repair]</a>",
+				"</div>",
+				"<div class='diagnostics'>",
+				"<p>($[properties.phone.code]) <b>$[properties.phone.number]</b></p>",
+				"<p>$[properties.address]</p>",
+				"<p><b>Время работы:</b></p>",
+				"<p>$[properties.time.when]: <b>$[properties.time.how]</b></p>",
+				"<a href='$[properties.more.direction]'>$[properties.more.what.diagnostics]</a>",
+				"</div>",
+				"<div class='plan'>",
+				"<p>($[properties.phone.code]) <b>$[properties.phone.number]</b></p>",
+				"<p>$[properties.address]</p>",
+				"<p><b>Время работы:</b></p>",
+				"<p>$[properties.time.when]: <b>$[properties.time.how]</b></p>",
+				"<a href='$[properties.more.direction]'>$[properties.more.what.plan]</a>",
+				"</div>",
+				"<div class='replace'>",
+				"<p>($[properties.phone.code]) <b>$[properties.phone.number]</b></p>",
+				"<p>$[properties.address]</p>",
+				"<p><b>Время работы:</b></p>",
+				"<p>$[properties.time.when]: <b>$[properties.time.how]</b></p>",
+				"<a href='$[properties.more.direction]'>$[properties.more.what.replace]</a>",
+				"</div>",
+				"<div class='tireservice'>",
+				"<p>($[properties.phone.code]) <b>$[properties.phone.number]</b></p>",
+				"<p>$[properties.address]</p>",
+				"<p><b>Время работы:</b></p>",
+				"<p>$[properties.time.when]: <b>$[properties.time.how]</b></p>",
+				"<a href='$[properties.more.direction]'>$[properties.more.what.tireservice]</a>",
+				"</div>",
 				"</div>",
 				"</div>"].join('\n'), {
+					_services: null,
 					build: function() {
 						balloonTemplate.superclass.build.call(this);
 						$(".balloon_close").on("click", $.proxy(this._close, this));
+						_services = $("ul.services li");
+						_services.on("click", function(e) {
+							$("div.description_wrapper > div").removeClass("active");
+							var _class = $(this).attr("class");
+							$("div." + _class).addClass("active");
+						});
 					},
 					clear: function() {
+						_services.off("click");
 						$(".balloon_close").off("click");
 						balloonTemplate.superclass.clear.call(this);
 					},
@@ -104,7 +142,13 @@ var yamap;
 			},
 			more: {
 				direction: 'javascript:{}',
-				what: "Хотите узнать подробней?"
+				what: {
+					repair: "Хотите ремонтировать подробней?",
+					diagnostics: "Хотите диагностировать подробней?",
+					plan: "Хотите планировать подробней?",
+					replace: "Хотите заменить подробней?",
+					tireservice: "Хотите шиномантаж подробней?"
+				}
 			}
 		}, {
 

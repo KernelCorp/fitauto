@@ -109,6 +109,11 @@ ymaps.ymaps-outer-pane
       line-height: 23px
       height: 185px
       border: 1px solid lightgrey
+      > div
+        display: none
+      .repair, .diagnostics, .plan, .replace, .tireservice
+        &.active
+          display: block
       p, a
         color: $fgcolor_description
         margin: 0
@@ -121,6 +126,8 @@ ymaps.ymaps-outer-pane
         display: inline-block
         margin: 0
         padding: 0
+        height: 35px
+        line-height: 51px
         &:before
           content: "Услуги:"
           font-weight: bold
@@ -135,13 +142,27 @@ ymaps.ymaps-outer-pane
           display: inline-block
           cursor: pointer
           background-image: url('../images/services.png')
-        .repair
-          background-position: 0 0
-        .diagnostics
-          background-position: -23px 0
-        .plan
-          background-position: -46px 0
-        .replace
-          background-position: -69px 0
-        .tireservice
-          background-position: -92px 0
+          &:hover
+            width: 30px
+            height: 30px
+            margin: 0 0.1em
+          &.repair
+            background-position: 0 0
+            &:hover
+              background-position: 0 -23px
+          &.diagnostics
+            background-position: -23px 0
+            &:hover
+              background-position: -30px -23px
+          &.plan
+            background-position: -46px 0
+            &:hover
+              background-position: -60px -23px
+          &.replace
+            background-position: -69px 0
+            &:hover
+              background-position: -90px -23px
+          &.tireservice
+            background-position: -92px 0
+            &:hover
+              background-position: -120px -23px
