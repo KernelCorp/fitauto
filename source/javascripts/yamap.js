@@ -10,7 +10,7 @@ var yamap;
 
 		var markerTemplate = ymaps.templateLayoutFactory.createClass("<div class='date marker_wrapper $[properties.type]'><p>$[properties.content]</p></div>"),
 			balloonTemplate = ymaps.templateLayoutFactory.createClass(
-				["<div class='balloon_wrapper'>",
+				["<div class='balloon_wrapper' id='$[properties.specific_id]'>",
 				"<div class='balloon_image'>",
 				"<a class='balloon_close' href='javascript:{}'></a>",
 				"<img src='$[properties.balloonImageSrc]'/>",
