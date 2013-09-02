@@ -3,7 +3,8 @@ class window.dropdown_menu
 		$('.menu-element .wrapper-dropdown-2').mouseenter ()->
 			if $('.open') != $(this).parent() && $('.open').length
 				$('.open').removeClass('open')
-			$(this).parent().addClass('open')
+			if $(this).parent().find('li').length
+				$(this).parent().addClass('open')
 			return
 
 		$('.menu-element .wrapper-dropdown-2').mouseleave (e)->
