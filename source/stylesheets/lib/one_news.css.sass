@@ -7,12 +7,6 @@ $color_white: #fff
 
 @import 'miniblogs'
 
-@mixin list_numbers($n)
-	@for $i from 1 through $n
-		&:nth-child(#{$i})
-			&:before
-				content: "#{$i}"
-
 .text_content_wrapper
 	width: 1080px
 	margin: 0 auto
@@ -58,8 +52,7 @@ $color_white: #fff
 				> li
 					position: relative
 					z-index: 1
-					&:before
-						content: " "
+					span
 						width: 13px
 						height: 13px
 						padding-left: 4px
@@ -74,7 +67,6 @@ $color_white: #fff
 						z-index: 0
 						box-sizing: border-box
 						-moz-box-sizing: border-box
-					@include list_numbers(20)
 			.orangelist
 				color: $color_red_orange
 				p
