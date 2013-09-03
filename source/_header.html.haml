@@ -82,13 +82,14 @@
 				%span.work-time
 					с 9:00 до 21:00 без выходных
 	.mainMenu
-		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
-				%span.topElementMenuRepair
-				%span.topElement
-					%span.topElement-inner
-						Ремонт
-					%span.round-end
+		.menu-element{:href => '#'}
+			.dd.wrapper-dropdown-2.element{:tabindex=>"1", 'data-link' => '#' }
+				%a{:href => 'http://google.com'}
+					%span.topElementMenuRepair
+					%span.topElement
+						%span.topElement-inner
+							Ремонт
+						%span.round-end
 			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 					%li
@@ -128,44 +129,33 @@
 								%span.liName
 									Ремонт подвески
 		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
-				%span.topElementMenuDiag
-				%span.topElement
-					%span.topElement-inner
-						Диагностика
-					%span.round-end
+			.dd.wrapper-dropdown-2.element{:tabindex=>"1"}
+				%a{:href => '#'}
+					%span.topElementMenuDiag
+					%span.topElement
+						%span.topElement-inner
+							Диагностика
+						%span.round-end
 			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
-				%span.topElementMenuTO
-				%span.topElement
-					%span.topElement-inner
-						Плановое&nbsp;ТО
-					%span.round-end
+			.dd.wrapper-dropdown-2.element{:tabindex=>"1"}
+				%a{:href => '#'}
+					%span.topElementMenuTO
+					%span.topElement
+						%span.topElement-inner
+							Плановое&nbsp;ТО
+						%span.round-end
 			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
-				%span.topElementMenuInstall
-				%span.topElement
-					%span.topElement-inner
-						Установка оборудования
-					%span.round-end
-			%ul.dropdown.dropdown-menu.level0
-				.menu-content
-					%li
-						%a{:href=>"#"}
-							%span.lIm
-							%span.liName
-								О компании
-		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
-				%span.topElementMenuShin
-				%span.topElement
-					%span.topElement-inner
-						Шиномонтаж
-					%span.round-end
+			.dd.wrapper-dropdown-2.element{:tabindex=>"1"}
+				%a{:href => '#'}
+					%span.topElementMenuInstall
+					%span.topElement
+						%span.topElement-inner
+							Установка оборудования
+						%span.round-end
 			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 					%li
@@ -174,12 +164,28 @@
 							%span.liName
 								О компании
 		.menu-element
-			.dd.wrapper-dropdown-2.element.dropdown-toggle{:tabindex=>"1", 'data-toggle' => 'dropdown'}
-				%span.topElementMenuService
-				%span.topElement
-					%span.topElement-inner
-						Наш&nbsp;сервис
-					%span.round-end
+			.dd.wrapper-dropdown-2.element{:tabindex=>"1"}
+				%a{:href => '#'}
+					%span.topElementMenuShin
+					%span.topElement
+						%span.topElement-inner
+							Шиномонтаж
+						%span.round-end
+			%ul.dropdown.dropdown-menu.level0
+				.menu-content
+					%li
+						%a{:href=>"#"}
+							%span.lIm
+							%span.liName
+								О компании
+		.menu-element
+			.dd.wrapper-dropdown-2.element{:tabindex=>"1"}
+				%a{:href => '#'}
+					%span.topElementMenuService
+					%span.topElement
+						%span.topElement-inner
+							Наш&nbsp;сервис
+						%span.round-end
 			%ul.dropdown.dropdown-menu.level0
 				.menu-content
 					%li
