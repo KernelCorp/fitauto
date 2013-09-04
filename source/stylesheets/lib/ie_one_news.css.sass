@@ -1,0 +1,22 @@
+.text_content_wrapper
+  .text_container
+    .newsdate
+      zoom: 1
+      *display: inline
+    .newscontent
+      padding-top: 0px
+      table
+        tr
+          background:
+            color: expression(this.rowIndex % 2 == 0 ? "#f1f1f1" : "#fff")
+      .numberlist
+        > li
+          span
+            background:
+              color: transparent
+              repeat: no-repeat
+              image: url('../images/redCircle.png')
+            width: unquote("expression((13 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px')")
+.right_column
+  zoom: 1
+  *display: inline
