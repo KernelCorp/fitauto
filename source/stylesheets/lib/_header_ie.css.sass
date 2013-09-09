@@ -1,9 +1,13 @@
 .lt-ie8
-  #header
-    .mainMenu
-      .topElement
-        top: -4px !important
-        text-decoration: none
+  #inner-container
+    #header
+      .mainMenu
+        a
+          .topElement
+            top: -4px !important
+            text-decoration: none
+        div.menu-element ul.dropdown-menu
+          top: 98%
 
 .lt-ie9
   #header
@@ -28,7 +32,11 @@
       zoom: 1
       *display: inline
     .mainMenu
-      .topElement
-        top: 16px
+      a
+        span
+          zoom: 1
+          cursor: pointer
+        .topElement
+          top: 16px
       div.menu-element ul.dropdown-menu
-        top: 100%
+        top: 120%

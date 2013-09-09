@@ -1,22 +1,43 @@
-.text_content_wrapper
-  .text_container
-    .newsdate
+.lt-ie9
+  .text_content_wrapper
+    .text_container
       zoom: 1
       *display: inline
-    .newscontent
-      padding-top: 0px
-      table
-        tr
-          background:
-            color: expression(this.rowIndex % 2 == 0 ? "#f1f1f1" : "#fff")
-      .numberlist
-        > li
-          span
+      .newsdate, a.img, .right-text
+        zoom: 1
+        *display: inline
+      .news-elem
+        .img
+          width: 160px
+          height: 99px
+      .date
+        &:before
+          content: none
+        background:
+          image: url('../images/dateStamp.png')
+          repeat: no-repeat
+        width: 131px
+        height: 18px
+        padding:
+          left: 7px
+          right: 5px
+      .newscontent
+        padding-top: 0px
+        table
+          tr
             background:
-              color: transparent
-              repeat: no-repeat
-              image: url('../images/redCircle.png')
-            width: unquote("expression((13 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px')")
-.right_column
-  zoom: 1
-  *display: inline
+              color: expression(this.rowIndex % 2 == 0 ? "#f1f1f1" : "#fff")
+        .numberlist
+          > li
+            span
+              background:
+                color: transparent
+                repeat: no-repeat
+                image: url('../images/redCircle.png')
+              width: unquote("expression((13 - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px')")
+      .paginator
+        a
+          padding-bottom: 2px
+  .right_column
+    zoom: 1
+    *display: inline

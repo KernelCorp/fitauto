@@ -8,7 +8,7 @@ ymaps.ymaps-outer-pane
   width: auto
   height: auto
 
-#yamap, .ymaps-outer-pane
+#yamap
   width: 790px
   height: 370px
   .date
@@ -16,40 +16,47 @@ ymaps.ymaps-outer-pane
     position: relative
     &:before
       border: 4px solid #fff
+    div.icon_arrow
+      width: 17px
+      height: 15px
+      position: absolute
+      margin: 0 auto
+      left: 0
+      bottom: -11px
+      right: 0
     p
       text-align: center
       font-family: PTSans
       color: #000
       margin: 0
       width: 50px
-      &:after
-        content: " "
-        width: 17px
-        height: 15px
-        position: absolute
-        margin: 0 auto
-        left: 0
-        bottom: -11px
-        right: 0
     &.marker_wrapper
       &.express
+        div.icon_arrow
+          background-image: url('../images/express_end.png')
         &:before
           background-color: $bgcolor_express
-        p
-          &:after
-            background-image: url('../images/express_end.png')
       &.standard
+        div.icon_arrow
+          background-image: url('../images/standard_end.png')
         &:before
           background-color: $bgcolor_standard
-        p
-          &:after
-            background-image: url('../images/standard_end.png')
       &.premium
+        div.icon_arrow
+          background-image: url('../images/premium_end.png')
         &:before
           background-color: $bgcolor_premium
-        p
-          &:after
-            background-image: url('../images/premium_end.png')
+  .balloon_arrow
+    border-left: 8px solid transparent
+    border-right: 8px solid transparent
+    border-top: 16px solid white
+    width: 16px
+    height: 16px
+    position: absolute
+    bottom: 0px
+    left: -8px
+    right: 0
+    margin: 0 auto
   .balloon_wrapper
     width: 300px
     height: 365px
@@ -59,18 +66,6 @@ ymaps.ymaps-outer-pane
     margin: 0 auto
     position: absolute
     background-color: white
-    &:before
-      content: ""
-      border-left: 8px solid transparent
-      border-right: 8px solid transparent
-      border-top: 16px solid white
-      width: 16px
-      height: 16px
-      position: absolute
-      bottom: -15px
-      left: 0
-      right: 0
-      margin: 0 auto
     .balloon_image
       width: 300px
       height: 180px
@@ -90,6 +85,10 @@ ymaps.ymaps-outer-pane
         font-size: 17pt
         padding: 2px 10px
         color: black
+        width: auto
+        line-height: 30px
+        p
+          width: auto
         &.date
           font-family: PTSans
           &:before
@@ -109,6 +108,7 @@ ymaps.ymaps-outer-pane
       line-height: 23px
       height: 185px
       border: 1px solid lightgrey
+      border-bottom: 0
       > div
         display: none
       .repair, .diagnostics, .plan, .replace, .tireservice
@@ -121,6 +121,14 @@ ymaps.ymaps-outer-pane
       a
         text-decoration: underline
         color: $fgcolor_a
+      p.pservices
+        font-weight: bold
+        color: #000
+        line-height: 20px
+        position: relative
+        top: -7px
+        display: inline
+        padding-right: 10px
       .services
         list-style: none
         display: inline-block
@@ -128,13 +136,6 @@ ymaps.ymaps-outer-pane
         padding: 0
         height: 35px
         line-height: 51px
-        &:before
-          content: "Услуги:"
-          font-weight: bold
-          color: #000
-          line-height: 20px
-          position: relative
-          top: -7px
         li
           width: 23px
           height: 23px
@@ -145,7 +146,7 @@ ymaps.ymaps-outer-pane
           &:hover
             width: 30px
             height: 30px
-            margin: 0 0.1em
+            margin: 0 1.5px
           &.repair
             background-position: 0 0
             &:hover
