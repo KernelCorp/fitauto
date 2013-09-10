@@ -35,8 +35,11 @@
 						Подробнее о станции...
 
 				%button.orange
-					Записаться на&nbsp;обслуживание
+					Записаться
+					%br
+					на&nbsp;обслуживание
 					%i.icon-angle-right
+						&#xf105;
 
 		.director_face
 			%img{:src => 'images/director.png'}
@@ -134,22 +137,4 @@
 							%img{:src => 'http://placehold.it/102x80&text=11'}
 
 
-:javascript
-	$(document).ready(function(){
-		$('#gallery').bxSlider({
-			controls: false,
-			pager: true,
-			pagerCustom: '.gallery-controls',
-			mode: 'fade',
-		});
-
-		$('.gallery-controls').bxSlider({
-			controls: true,
-			pager: false,
-			slideWidth: 103,
-			minSlides: 4,
-			maxSlides: 4,
-			slideMargin: 10
-		});
-	});
-
+%script{:type => 'text/javascript', :src => 'javascripts/sliders_stations.js'}

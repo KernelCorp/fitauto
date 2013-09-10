@@ -1,0 +1,68 @@
+.lt-ie9
+  .main-gallery
+    .slider-navigation
+      *display: inline
+      zoom: 1
+      z-index: 4
+      .title
+        border: 0
+        width: 250px
+        background:
+          image: url('../images/mainSliderTitle.png')
+          repeat: no-repeat
+          color: transparent
+      .title:after
+        content: none
+      #bx-slider-custom-pager
+        a
+          width: 230px
+          border: 0
+          height: 37px
+          background:
+            image: url('../images/passiveSliderPoint.png')
+            repeat: no-repeat
+            color: transparent
+          i
+            right: 5px
+            top: -3px
+        a.active
+          width: 250px
+          height: 37px
+          background:
+            image: url('../images/activeSliderPoint.png')
+            color: transparent
+        a.active:before
+          content: none
+        a.active:after
+          content: none
+        a:after
+          content: none
+    .slider
+      *display: inline
+      zoom: 1
+      .elem
+        img.background
+          position: relative
+          zoom: 1
+        .text-layer
+          h1
+            filter: unquote("progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=1, Color=#404040, Positive='true')")
+            zoom: 1
+          p
+            filter: unquote("progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=1, Color=#404040, Positive='true')")
+            zoom: 1
+          .more-link
+            border: 0
+            width: 250px
+            background:
+              image: url('../images/leftAssignButton.png')
+              color: transparent
+              repeat: no-repeat
+            a
+              line-height: 45px
+              padding-left: 40px
+              zoom: 1
+              border: 0
+              i
+                &:before
+                  content: none

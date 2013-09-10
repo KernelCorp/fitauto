@@ -60,6 +60,7 @@ $fgcolor_a: #f27f35
         .balloon_absolute
           &.date
             width: 100px
+            background-image: none
             zoom: 1
             filter: unquote("progid:DXImageTransform.Microsoft.Matrix(M11=1.0, M12=-0.21, M21=0, M22=1, SizingMethod='auto expand')")
             p
@@ -81,7 +82,7 @@ $fgcolor_a: #f27f35
       .description_wrapper
         padding: 10px 20px 25px 20px
         line-height: 23px
-        height: 185px
+        height: unquote("expression((185 - parseInt(this.currentStyle['paddingTop']) - parseInt(this.currentStyle['paddingBottom'])) + 'px')")
         border: 1px solid lightgrey
         width: unquote("expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight']) - 1) + 'px')")
         height: 160px
