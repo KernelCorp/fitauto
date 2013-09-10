@@ -4,7 +4,7 @@ i[class^='icon-footer-']
 	width: 21px
 	height: 21px
 	margin: 0px 2px 0
-	vertical-align: text-top
+	vertical-align: middle
 	zoom: 1
 	*display: inline
 
@@ -34,11 +34,12 @@ i.icon-footer-sitelogo
 #footer
 	margin-top: 40px
 	.footer-menu
+		overflow: hidden
 		height: 70px
 		color: #fff
 		margin-bottom: 20px
 		.footer-menu-left
-			height: 70px
+			width: 120px
 			background-color: #f27d32
 			background: url(../images/footer-left.jpg) left top no-repeat #f27d32
 			display: inline-block
@@ -49,19 +50,29 @@ i.icon-footer-sitelogo
 			*display: inline
 
 			a.img-link
+				margin-right: 3px
 				text-decoration: none
 
 		.footer-menu-right
-			height: 70px
+			height: 68px
+			width: 800px
 			background-color: #ed4d30
 			background: url(../images/footer-middle-red.jpg) left top no-repeat #ed4d30
 			display: inline-block
-			padding: 22px 20px 25px 50px
+			padding: 17px 24px 33px 54px
 			vertical-align: middle
-			width: 880px
 			zoom: 1
 			*display: inline
+			.pull-right
 
+				*display: inline
+				zoom: 1
+				float: none
+				margin-left: 321px
+				line-height: 26px
+
+				span.question
+					vertical-align: middle
 			a
 				color: #fff
 				font:
@@ -94,12 +105,12 @@ i.icon-footer-sitelogo
 				span.phone_numbers
 					font:
 						family: NeoSansPro-bold
-						weight: normal
 						style: normal
 						size: 20px
 	.bottom-block
 		height: 50px
 		padding: 0 30px
+		overflow: hidden
 		a:hover
 			color: #000000
 			text-decoration: none
