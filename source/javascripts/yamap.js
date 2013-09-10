@@ -17,19 +17,34 @@ var yamap;
 				"<div class='date balloon_absolute $[properties.type]'><p>$[properties.content]</p></div></div>",
 				"<div class='description_wrapper'>",
 				"<p class='pservices'>Услуги:</p><ul class='services'>",
-				"<li class='repair' title='ремонт'></li>",
-				"<li class='diagnostics' title='диагностика'></li>",
-				"<li class='plan' title='плановое то'></li>",
-				"<li class='replace' title='установка оборудования'></li>",
-				"<li class='tireservice' title='шиномонтаж'></li>",
+				"<li class='repair' ></li>",
+				"<li class='diagnostics' ></li>",
+				"<li class='plan' ></li>",
+				"<li class='replace' ></li>",
+				"<li class='tireservice' ></li>",
 				"</ul>",
-				"<div class='repair active'>",
+				"<div class='main-info active'>",
 				"<p>($[properties.phone.code]) <b>$[properties.phone.number]</b></p>",
 				"<p>$[properties.address]</p>",
 				"<p><b>Время работы:</b></p>",
 				"<p>$[properties.time.when]: <b>$[properties.time.how]</b></p>",
 				"<a href='$[properties.more.direction]'>$[properties.more.what]</a>",
 				"</div>",
+                "<div class='hint repair'>",
+                "<p>Ремонт</p>",
+                "</div>",
+                "<div class='hint diagnostics'>",
+                "<p>diagnostic</p>",
+                "</div>",
+                "<div class='hint plan'>",
+                "<p>plan</p>",
+                "</div>",
+                "<div class='hint replace'>",
+                "<p>replace</p>",
+                "</div>",
+                "<div class='hint tireservice'>",
+                "<p>tireservice</p>",
+                "</div>",
 				"</div>",
 				"</div>",
 				"<div class='balloon_arrow'>",
@@ -38,7 +53,20 @@ var yamap;
 					build: function() {
 						balloonTemplate.superclass.build.call(this);
 						$(".balloon_close").on("click", $.proxy(this._close, this));
+                        _services=$("ul.services li");
+                        _services.on("mouseenter",function(e){
+                            console.log($(this).attr("class"));
+                            $("div.description_wrapper > div").removeClass("active");
+                            var t=$(this).attr("class");
+                            $("div."+t).addClass("active")
+                        })
+
+                        _services.on("mouseleave",function(e){
+                            $('.hint').removeClass('active');
+                            $('.main-info').addClass('active')
+                        })
 					},
+                    _services: null,
 					clear: function() {
 						$(".balloon_close").off("click");
 						balloonTemplate.superclass.clear.call(this);
@@ -58,6 +86,7 @@ var yamap;
 						this.events.fire("userclose");
 					}
 				}
+
 			);
 		ymaps.layout.storage.add("fitauto#markerTemplate", markerTemplate);
 		ymaps.layout.storage.add("fitauto#balloonTemplate", balloonTemplate);
@@ -138,5 +167,6 @@ var yamap;
 		for(var i = 0, l = placemarks.length; i < l; i++) {
 			yamap.geoObjects.add(placemarks[i]);
 		}
+
 	});
 })()
