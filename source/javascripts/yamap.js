@@ -8,15 +8,15 @@ var yamap;
 			zoom: 6
 		});
 
-		var markerTemplate = ymaps.templateLayoutFactory.createClass("<div class='date marker_wrapper $[properties.type]'><p>$[properties.content]</p></div>"),
+		var markerTemplate = ymaps.templateLayoutFactory.createClass("<div class='date marker_wrapper $[properties.type]'><p>$[properties.content]</p><div class='icon_arrow' /></div>"),
 			balloonTemplate = ymaps.templateLayoutFactory.createClass(
 				["<div class='balloon_wrapper' id='$[properties.specific_id]'>",
 				"<div class='balloon_image'>",
 				"<a class='balloon_close' href='javascript:{}'></a>",
 				"<img src='$[properties.balloonImageSrc]'/>",
-				"<div class='date balloon_absolute $[properties.type]'>$[properties.content]</div></div>",
+				"<div class='date balloon_absolute $[properties.type]'><p>$[properties.content]</p></div></div>",
 				"<div class='description_wrapper'>",
-				"<ul class='services'>",
+				"<p class='pservices'>Услуги:</p><ul class='services'>",
 				"<li class='repair' title='ремонт'></li>",
 				"<li class='diagnostics' title='диагностика'></li>",
 				"<li class='plan' title='плановое то'></li>",
@@ -31,6 +31,8 @@ var yamap;
 				"<a href='$[properties.more.direction]'>$[properties.more.what]</a>",
 				"</div>",
 				"</div>",
+				"</div>",
+				"<div class='balloon_arrow'>",
 				"</div>"].join('\n'), {
 					_services: null,
 					build: function() {

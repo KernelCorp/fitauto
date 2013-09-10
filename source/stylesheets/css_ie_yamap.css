@@ -1,0 +1,56 @@
+.lt-ie9 #yamap .date {
+  width: 50px;
+  height: 20px;
+  padding-left: 7px;
+  zoom: 1; }
+  .lt-ie9 #yamap .date p {
+    width: 55px; }
+  .lt-ie9 #yamap .date div.icon_arrow {
+    top: 3px;
+    left: 4px;
+    zoom: 1; }
+  .lt-ie9 #yamap .date.marker_wrapper.express {
+    background-color: url("../images/markerExpress.png"); }
+  .lt-ie9 #yamap .date.marker_wrapper.standard {
+    background-color: url("../images/markerStandard.png"); }
+  .lt-ie9 #yamap .date.marker_wrapper.premium {
+    background-color: url("../images/markerPremium.png"); }
+.lt-ie9 #yamap .balloon_arrow {
+  width: 0;
+  height: 0; }
+.lt-ie9 #yamap .balloon_wrapper .balloon_image .balloon_absolute.date {
+  width: 100px;
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.0, M12=-0.21, M21=0, M22=1, SizingMethod='auto expand');
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-family: PTSans;
+  border: 0;
+  zoom: 1; }
+  .lt-ie9 #yamap .balloon_wrapper .balloon_image .balloon_absolute.date p {
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.0, M12=0.21, M21=0, M22=1, SizingMethod='auto expand');
+    width: 90px;
+    line-height: 20px; }
+  .lt-ie9 #yamap .balloon_wrapper .balloon_image .balloon_absolute.date.express {
+    background-color: #7eceee; }
+  .lt-ie9 #yamap .balloon_wrapper .balloon_image .balloon_absolute.date.standard {
+    background-color: #e2e4e5; }
+  .lt-ie9 #yamap .balloon_wrapper .balloon_image .balloon_absolute.date.premium {
+    background-color: #fbd732; }
+.lt-ie9 #yamap .balloon_wrapper .description_wrapper {
+  padding: 10px 20px 25px 20px;
+  line-height: 23px;
+  height: 185px;
+  border: 1px solid lightgrey;
+  width: expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px');
+  border-bottom: 0; }
+  .lt-ie9 #yamap .balloon_wrapper .description_wrapper .services {
+    *display: inline;
+    zoom: 1; }
+    .lt-ie9 #yamap .balloon_wrapper .description_wrapper .services li {
+      margin-top: 7px;
+      *display: inline;
+      zoom: 1; }
+      .lt-ie9 #yamap .balloon_wrapper .description_wrapper .services li:hover {
+        margin-top: 0;
+        margin-left: 2px; }

@@ -1,6 +1,7 @@
 .paginator
 	%a.prev{:href => '#'}
 		%i.icon-chevron-left
+			&#xf104;
 
 	- current = rand(9) + 1
 	- 1.upto(9) do |i|
@@ -12,3 +13,4 @@
 				= i
 	%a.next{:href => '#'}
 		%i.icon-chevron-right
+			&#xf105;
