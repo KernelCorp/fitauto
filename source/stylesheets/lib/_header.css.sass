@@ -1,9 +1,6 @@
-
 #header .topLinks
 	width: 100%
 	height: 45px
-
-	
 
 #header .topLinks .wrapper-dropdown-top .topElement
 	border-bottom: 1px dashed #ed4d30
@@ -20,18 +17,15 @@
 			right: 0
 			top: 18px
 
-
 #header .topLinks .topElement
 	border-bottom: 1px solid #ed4d30
 	margin-left: 3px
-	
+
 #header .topLinks a
 	text-decoration: none
-	
+
 #header .topLinks .topElement:hover
 	border-bottom: 1px dashed #ed4d30
-
-	
 
 .topElementCompanyIcon, .topElementCityIcon, .topElementCompanyService, .topElementCompanyBlog, .topElementCompanyFranch
 	width: 20px
@@ -39,7 +33,6 @@
 	padding-left: 20px
 	padding-bottom: 3px
 	border: none
-	
 
 #header .topLinks .topElementCompanyIcon
 	background: url('../img/headerCompanyMini.png') no-repeat
@@ -68,11 +61,11 @@
 #header .topLinks .company, #header .topLinks .franch, #header .topLinks .blog, #header .topLinks .auto
 	float: right
 	padding: 10px 15px 10px 5px
+
 #header .topLinks .franch, #header .topLinks .blog, #header .topLinks .auto
 	a:hover
 		span.topElement
 			border-bottom: 0
-
 
 #header .topLogo
 	height: 100px
@@ -80,7 +73,6 @@
 	background: url('../img/headerTopLogo.png') no-repeat
 	position: absolute
 	z-index: 2
-
 
 #header .topLogo .linkMain
 	top: 0
@@ -90,7 +82,6 @@
 	background: none
 	height: 56px
 	width: 460px
-
 
 #header .topLogo .linkAddService
 	top: 21px
@@ -106,7 +97,6 @@
 	text-transform: uppercase
 	text-decoration: none
 	line-height: 15px
-
 
 #header .logo-container
 	position: relative
@@ -189,6 +179,11 @@
 .menu-element
 	float: left
 	position: relative
+	.element
+		outline: none
+		a
+			span
+				color: #000000
 //	padding-right: 19px
 
 
@@ -218,6 +213,12 @@
 		display: inline-block
 
 .menu-element.open
+	.topElement-inner
+		background: url(../images/menu_elem_active_background.png) repeat-x
+	span.round-end
+		background: url(../images/menu_element_active_round_end.png) no-repeat
+
+.menu-element.hover
 	.topElement-inner
 		background: url(../images/menu_elem_active_background.png) repeat-x
 	span.round-end

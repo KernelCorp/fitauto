@@ -1,0 +1,98 @@
+$bgcolor_express: #7eceee
+$bgcolor_standard: #e2e4e5
+$bgcolor_premium: #fbd732
+$fgcolor_description: #000
+$fgcolor_a: #f27f35
+
+.lt-ie8
+  div#yamap
+    .date
+      padding:
+        left: 7px
+        right: 15px
+        bottom: 2px
+      div.icon_arrow
+        bottom: -12px
+        left: 32px
+    .balloon_wrapper
+      .balloon_image
+        .balloon_absolute.date
+          width: 100px
+          padding:
+            bottom: 10px
+      .services
+        li:hover
+          margin:
+            left: 2px
+            right: 2px
+
+.lt-ie9
+  #yamap
+    .date
+      &:before
+        content: none
+      width: 69px
+      height: 22px
+      padding:
+        left: 7px
+        right: 7px
+        bottom: 5px
+      background-repeat: no-repeat
+      zoom: 1
+      p
+        width: 75px
+      div.icon_arrow
+        zoom: 1
+        bottom: -11px
+        left: -5px
+      &.marker_wrapper
+        &.express
+          background-image: url('../images/markerExpress.png')
+        &.standard
+          background-image: url('../images/markerStandard.png')
+        &.premium
+          background-image: url('../images/markerPremium.png')
+    .balloon_arrow
+      width: 0
+      height: 0
+    .balloon_wrapper
+      .balloon_image
+        .balloon_absolute
+          &.date
+            width: 100px
+            zoom: 1
+            filter: unquote("progid:DXImageTransform.Microsoft.Matrix(M11=1.0, M12=-0.21, M21=0, M22=1, SizingMethod='auto expand')")
+            p
+              width: 90px
+              line-height: 30px
+              //filter: unquote("progid:DXImageTransform.Microsoft.Matrix(M11=1.0, M12=0.21, M21=0, M22=1, SizingMethod='auto expand')")
+            padding:
+              bottom: 5px
+              right: 10px
+            font-family: PTSans
+            border: 0
+            zoom: 1
+            &.express
+              background-color: $bgcolor_express
+            &.standard
+              background-color: $bgcolor_standard
+            &.premium
+              background-color: $bgcolor_premium
+      .description_wrapper
+        padding: 10px 20px 25px 20px
+        line-height: 23px
+        height: 185px
+        border: 1px solid lightgrey
+        width: unquote("expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight']) - 1) + 'px')")
+        height: 160px
+        border-bottom: 0
+        .services
+          *display: inline
+          zoom: 1
+          li
+            margin-top: 7px
+            *display: inline
+            zoom: 1
+            &:hover
+              margin-top: 0
+              margin-left: 1px

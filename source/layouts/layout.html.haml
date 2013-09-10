@@ -33,7 +33,12 @@
     
     -# Stylesheets
     %link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheets/main.css'}
-    %link{:href => 'http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic', :rel => 'stylesheet', :type =>'text/css'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheets/ptsans_bold.css'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheets/ptsans_regular.css'}
+
+
+    /[if IE]
+      %link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheets/main_ie.css'}
 
     %script{:type => 'text/javascript', :src => 'javascripts/jquery.min.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/jquery.bxslider.js'}
@@ -43,7 +48,9 @@
     %script{:type => 'text/javascript', :src => 'javascripts/modernizr.custom.79639.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/jquery.jcarousel.min.js'}
     %script{:type => 'text/javascript', :src => 'javascripts/application.js'}
-    %script{:type => "text/javascript", :src => "//vk.com/js/api/openapi.js?98"}
+    %script{:type => 'text/javascript', :src => 'javascripts/jquery.corner.js'}
+    %script{:type => "text/javascript", :src => "http://vk.com/js/api/openapi.js?98"}
+
     %script{:type => "text/javascript"}
       VK.init({apiId: 3831693, onlyWidgets: true});
   %body{class: current_page.data.body_class || 'page'}
@@ -53,4 +60,3 @@
         = yield
         = partial 'footer'
     -# Javascripts
-

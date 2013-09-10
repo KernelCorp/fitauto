@@ -7,6 +7,7 @@
       на обслуживание
       &nbsp;
       %i.icon-angle-right
+        &#xf105;
   #book-service-modal.modal.hide.fade{:tabindex=>"-1"}
     .modal-body
       %a{'data-dismiss' => 'modal'}
@@ -43,7 +44,7 @@
             Записаться
       .right-map
         #yamap{:style => 'width: 560px; height: 445px'}
-        = javascript_include_tag 'yamap'
+        %script{:type => 'text/javascript', :src => 'javascripts/yamap.js'}
 
 
   %ul.service-list
