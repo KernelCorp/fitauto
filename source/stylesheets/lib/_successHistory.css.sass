@@ -17,6 +17,7 @@
       vertical-align: middle
       border: none
       background-image: url('../images/franchise_buy.png')
+      background-repeat: no-repeat
       float: right
       width: 212px
       height: 46px
@@ -25,6 +26,8 @@
       .arrow
         vertical-align: bottom
         display: inline-block
+        zoom: 1
+        *display: inline
         font-size: 130%
   .success-row
     width: 1080px
@@ -34,7 +37,9 @@
       text-decoration: none
       background-color: #f7f8f8
       display: inline-block
-      width: 333px
+      *display: inline
+      zoom: 1
+      width: 332px
       height: 434px
       border-bottom: solid 2px #f27d32
       .pic-box
@@ -64,7 +69,7 @@
     .sb-mid
       margin-left: 40px
     .sb-right
-      float: right
+      margin-left: 40px
 
 .blogs_wrapper#success_history
   margin-bottom: 30px

@@ -5,13 +5,13 @@
 	.example_buildings
 		border-bottom: 5px solid #f7f8f8
 		margin-top: 35px
-
 		.current
 			display: inline-block
 			margin-left: 10px
 			width: 484px
 			vertical-align: bottom
-
+			zoom: 1
+			*display: inline
 		.other
 			display: inline-block
 			vertical-align: bottom
@@ -19,7 +19,9 @@
 			width: 585px
 			margin-right: -5px
 			padding-right: 8px
-
+			zoom: 1
+			*display: inline
+			*padding-right: 0px
 			.elem
 				position: relative
 				display: inline-block
@@ -28,6 +30,8 @@
 				text-align: left
 				width: 168px
 				margin-left: 43px
+				zoom: 1
+				*display: inline
 				a
 					border-bottom: 1px dashed #ed4d30
 					display: inline-block
@@ -50,6 +54,8 @@
 			margin-top: 27px
 			margin-right: 40px
 			width: 330px
+			zoom: 1
+			*display: inline
 			.elem
 				border-radius: 0
 				border: none
@@ -60,6 +66,8 @@
 					font-size: 18px
 					text-decoration: none
 					outline: none
+					zoom: 1
+					*display: inline
 
 					span.h3
 						display: inline-block
@@ -68,16 +76,30 @@
 						text-transform: uppercase
 						margin: 0
 						border-bottom: 1px dashed #ed4d30
+						zoom: 1
+						*display: inline
 
 					i.icon-angle-down
+						width: 10px
+						height: 8px
+						zoom: 1
 						display: none
 					i.icon-angle-up
+						width: 10px
+						height: 8px
+						zoom: 1
 						display: inline
 
 				a.toggler.collapsed
 					i.icon-angle-down
+						width: 10px
+						height: 8px
+						zoom: 1
 						display: inline
 					i.icon-angle-up
+						width: 10px
+						height: 8px
+						zoom: 1
 						display: none
 
 				.panel-body
@@ -90,6 +112,8 @@
 			display: inline-block
 			vertical-align: top
 			width: 706px
+			zoom: 1
+			*display: inline
 
 			span.h3
 				margin: 23px 0 20px
@@ -101,13 +125,15 @@
 
 				.orange
 					min-height: 16px
-					padding: 14px 30px 14px 16px
+
 
 			.plan
 				display: inline-block
 				vertical-align: top
 				width: 335px
 				margin-right: 34px
+				zoom: 1
+				*display: inline
 
 				img
 					margin-bottom: 15px
@@ -117,6 +143,8 @@
 				vertical-align: top
 				width: 336px
 				margin-right: -5px
+				zoom: 1
+				*display: inline
 
 				.top
 					width: 336px
