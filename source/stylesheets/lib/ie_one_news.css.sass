@@ -1,4 +1,16 @@
 .lt-ie9
+  .date
+    &:before
+      content: none
+    background:
+      image: url('../images/dateStamp.png')
+      repeat: no-repeat
+    width: 131px
+    height: 18px
+    text-align: center
+    padding:
+      left: 5px
+      right: 5px
   .text_content_wrapper
     .text_container
       zoom: 1
@@ -10,18 +22,7 @@
         .img
           width: 160px
           height: 99px
-      .date
-        &:before
-          content: none
-        background:
-          image: url('../images/dateStamp.png')
-          repeat: no-repeat
-        width: 131px
-        height: 18px
-        text-align: center
-        padding:
-          left: 5px
-          right: 5px
+
       .newscontent
         padding-top: 0px
         table
@@ -42,3 +43,11 @@
   .right_column
     zoom: 1
     *display: inline
+  .tell_friends
+    p
+      padding-right: 10px
+    *
+      zoom: 1
+      *display: inline
+    script
+      display: none
