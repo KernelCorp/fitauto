@@ -68,10 +68,10 @@
 				width: 210px
 				z-index: 2
 
+
 			a.active
 				background-color: #ed4d30
 				padding-right: 20px
-				border-bottom: none
 
 			i.icon-angle-right
 				box-sizing: content-box
@@ -106,7 +106,7 @@
 				content: " "
 				height: 100%
 				position: absolute
-				right: -20px
+				right: -19px
 				top: 0px
 				width: 25px
 				-o-transform: skewX(-12deg)
@@ -188,6 +188,11 @@
 						-webkit-transform: skewX(12deg)
 						transform: skewX(12deg)
 						i
-						font-size: 18px
-						&:before
-							content: none
+							font-size: 18px
+							&:before
+								content: none
+
+@-moz-document url-prefix()
+	#bx-slider-custom-pager
+		a.active
+			border-bottom: none !important
