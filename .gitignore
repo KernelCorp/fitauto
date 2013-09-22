@@ -17,3 +17,6 @@
 *.swp
 *.orig
 Gemfile.lock
+# TODO: repair global gitignore 
+.ruby-version
+.ruby-gemset
