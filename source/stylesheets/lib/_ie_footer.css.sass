@@ -2,6 +2,15 @@
   #footer
     width: 1080px
     .carousel
+      .jcarousel-item
+        img
+          border-radius: 50px
+          behavior: url('stylesheets/ie_htcs/PIE.htc')
+          width: 84px
+          height: 84px
+          zoom: 1
+          position: relative
+          box-sizing: content-box
       .jcarousel-skin-tango
         .jcarousel-container-horizontal
           width: unquote("expression((document.getElementById('footer').clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) + 'px')")
