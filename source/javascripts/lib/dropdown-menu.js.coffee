@@ -1,8 +1,8 @@
 class window.dropdown_menu
 	init_menu: () ->
 		$('.menu-element .wrapper-dropdown-2').mouseenter ()->
-			if $('.open') != $(this).parent() && $('.open').length
-				$('.open').removeClass('open')
+			if $('.mainMenu .open') != $(this).parent() && $('.mainMenu .open').length
+				$('.mainMenu .open').removeClass('open')
 			if $(this).parent().find('li').length
 				$(this).parent().addClass('open')
 			else

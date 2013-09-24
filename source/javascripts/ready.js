@@ -20,16 +20,14 @@ DropDown.prototype = {
     }
 }
 
-$(function() {
-
+/*$(function() {
     var dd = new DropDown( $('.dd') );
 
     $(document).click(function() {
         $('.wrapper-dropdown-top').removeClass('active');
     });
     $('.dropdown-toggle').dropdown()
-
-});
+});*/
 
 jQuery(document).ready(function() {
     jQuery('#mycarousel').jcarousel({
